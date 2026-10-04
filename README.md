@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 4, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -177,6 +177,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
+| Watch context fill and usage limits as a pixel-art pet | [Token Monster](https://github.com/ugglr/claude-token-monster) | Reads session and tool activity; optional sound on macOS; no network calls |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
 
@@ -316,6 +317,17 @@ Displays a breathing animation while Claude works and removes it when the reply 
 
 Settings persist across sessions. **MIT; early-access documentation.**
 
+### [Token Monster](https://github.com/ugglr/claude-token-monster) · ugglr
+
+A pixel-art pet in a side pane that eats your tokens; its size, face and glow show context fill, usage limits and what Claude is doing.
+
+```text
+/plugin marketplace add ugglr/claude-token-monster
+/plugin install token-monster@token-monster
+```
+
+Requires Claude Code 2.1.287+. The author documents reading the response stream, prompts and tool results to measure length without keeping them, tool names with their path, command, URL or pattern labels, status line context, limit and cost figures, the `/context` breakdown, running subagents and `COLORTERM`. It stores the chosen monster, color, tokens eaten and sound setting. Optional sound plays through `afplay` on macOS. The author documents no network calls. Documentation review, October 4, 2026; not runtime-tested here. **MIT.**
+
 ### [Intermission](https://github.com/jarrodwatts/intermission) · jarrodwatts
 
 Opens a Doom deathmatch pane while Claude works, using Odamex and Freedoom. The game returns focus when Claude finishes or needs input, such as a permission response. Enable it with `/intermission`; disable it with `/intermission off`.
@@ -347,7 +359,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
