@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods. The original 14 entries were checked against author documentation on **October 3, 2026**; Spinlings was added from a maker-affiliated source and documentation review on **October 6, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; Spinlings' entry separately identifies maker-supplied CLI/SDK checks and static captures. These do not establish independent native testing or security audits. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Collect creatures, trade cards and duel other players | [Spinlings](https://github.com/416rehman/spinlings) | Claude Code 2.1.287+; online world or a separate offline collection |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -339,6 +340,25 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [Spinlings](https://github.com/416rehman/spinlings) · 416rehman
+
+Collect pixel creatures while Claude works, choose a team of three, trade cards and duel other players' saved teams. Duels are asynchronous, so the other player does not need to be online at the same time.
+
+```text
+/plugin marketplace add 416rehman/spinlings
+/plugin install spinlings@spinlings
+```
+
+Requires **Claude Code 2.1.287+**. Restart Claude and start a new session after installing, then run `/spin`. The terminal and compatible Claude Desktop Code sessions are supported. Fresh installs start in the online world at `spinlings.dev`; `/spin world offline` uses a separate local collection. Online play sends game actions and a coarse model family to the game server. The author documents no prompt, reply, project-file or Claude-credential reads, and no model calls by the game. **Mod and server: MIT.** [Installation and source](https://github.com/416rehman/spinlings#install) · [Privacy](https://spinlings.dev/privacy).
+
+**Review: October 6, 2026.** Maker-affiliated source and documentation review. The maintainer's strict CLI validation and 243 SDK tests passed on Claude Code **2.1.288**. Those checks are separate from this collection's 390 bundled tests and do not establish independent native layout acceptance. The original game was built with Claude; Codex assisted later UI and test iterations and this contribution.
+
+Owner-supplied static Claude Desktop captures show a player duel and its win/streak reward. They have no visible version footer and do not establish animation behavior or independent native acceptance of v0.2.16.
+
+![A player duel with an optional special-hit cue in Claude Desktop](https://spinlings.dev/media/desktop-player-duel-2026-10-06.png)
+
+![A duel win and streak reward above the prompt in Claude Desktop](https://spinlings.dev/media/desktop-duel-win-2026-10-06.png)
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -347,7 +367,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
