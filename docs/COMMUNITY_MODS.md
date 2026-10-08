@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -13,6 +13,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Keep follow-up prompts in order | [claude-queue](https://github.com/galElmalah/claude-mods/tree/main/claude-queue) | Automatically submits queued text after turns end |
 | Make tables, code and charts easier to scan | [prismantis](https://github.com/NahumLitvin/prismantis) | Reply themes, copy controls and optional diagram hints |
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
+| Keep usage limits in view at a glance | [Token Hamster](https://github.com/valeryia-piatrova/token-hamster) | Moods follow plan limits (Pro/Max); API keys get tokens and cost only |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
@@ -101,6 +102,17 @@ Install the binary with `brew install tomstagl/tap/cctop` or `cargo install ccto
 ```
 
 Upstream describes an in-app panel with a terminal-split fallback; the latter needs a supported multiplexer or terminal. It reads local session data, and some forecasts and token calculations are explicitly estimates. **MIT.**
+
+### [Token Hamster](https://github.com/valeryia-piatrova/token-hamster) · valeryia-piatrova
+
+Draws a hamster above the prompt that eats every token in the colours of the token mix and changes mood with the 5-hour and weekly limits: worried at half, running in its wheel at a quarter left, asleep in its house with a reset countdown at 0%. `/hamster` opens a pane with the context breakdown, a run-out forecast, cost per turn and usage by subagent, tool and model.
+
+```text
+/plugin marketplace add valeryia-piatrova/token-hamster
+/plugin install token-hamster@token-hamster
+```
+
+Reads only the session's own usage data; keeps a lifetime total in the plugin store. No processes or network. **MIT; Claude Code 2.1.289+.**
 
 ### [Flightdeck](https://github.com/scasella/claude-flightdeck) · scasella
 
