@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Earn LLM tokens by clicking while Claude thinks | [banana](https://github.com/somethingwentwell/cc-mod-banana-game) | Syncs click counts with a sponsor server; redeeming needs a gateway account |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -339,6 +340,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [banana](https://github.com/somethingwentwell/cc-mod-banana-game) · somethingwentwell
+
+A clicker pane that opens while Claude thinks and closes when the answer lands. Clicks earn coins and rare banana drops, which sell for more coins in the Bag. The Shop trades coins for $1 of LLM tokens at a weekly pool rate, and a Top tab shows a lifetime leaderboard. `/banana` opens the pane at any time.
+
+```text
+/plugin marketplace add somethingwentwell/cc-mod-banana-game
+/plugin install banana@banana
+```
+
+Requires Claude Code 2.1.287+; the author tests on 2.1.291. The pane opens on its own at 144+ terminal columns, otherwise with `/banana`. It sends a random player id, click and coin counts, and an optional leaderboard name and gateway login to the sponsor server; never prompts, code or conversation. Emptying the **Server URL** setting keeps it offline. Redeeming needs an account on the sponsor's New API gateway, linked with `/banana link <username>`. Coins and bananas expire after 7 days. **MIT.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -347,7 +359,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
