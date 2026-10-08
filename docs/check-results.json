@@ -1,5 +1,5 @@
 {
-  "version": "2.1.288 (Claude Code)",
+  "version": "2.1.294 (Claude Code)",
   "mods": [
     {
       "id": "context-meter",
@@ -8,12 +8,12 @@
         {
           "command": "claude plugin validate mods/context-meter --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/context-meter/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/context-meter/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=context-meter}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/context-meter/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/context-meter/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=context-meter}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=context-meter}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/context-meter",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [53.84ms]\n(pass) leaves another plugin pane untouched [22.70ms]\n(pass) valid controls and behavior on terminal [25.78ms]\n(pass) valid controls and behavior on desktop [18.32ms]\n(pass) capture native render tree for fixture preview [17.33ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.45s]\n[Captured native render tree for context-meter]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [44.86ms]\n(pass) leaves another plugin pane untouched [23.31ms]\n(pass) valid controls and behavior on terminal [28.79ms]\n(pass) valid controls and behavior on desktop [21.96ms]\n(pass) capture native render tree for fixture preview [17.56ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for context-meter]\n"
         }
       ]
     },
@@ -24,12 +24,12 @@
         {
           "command": "claude plugin validate mods/quota-watch --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/quota-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/quota-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=quota-watch}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/quota-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/quota-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=quota-watch}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=quota-watch}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/quota-watch",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [54.13ms]\n(pass) leaves another plugin pane untouched [22.66ms]\n(pass) valid controls and behavior on terminal [24.13ms]\n(pass) valid controls and behavior on desktop [19.46ms]\n(pass) capture native render tree for fixture preview [17.12ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.45s]\n[Captured native render tree for quota-watch]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [63.83ms]\n(pass) leaves another plugin pane untouched [23.33ms]\n(pass) valid controls and behavior on terminal [27.72ms]\n(pass) valid controls and behavior on desktop [21.86ms]\n(pass) capture native render tree for fixture preview [16.25ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.41s]\n[Captured native render tree for quota-watch]\n"
         }
       ]
     },
@@ -40,12 +40,12 @@
         {
           "command": "claude plugin validate mods/cache-inspector --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/cache-inspector/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/cache-inspector/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=cache-inspector}, turn.step, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/cache-inspector/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/cache-inspector/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=cache-inspector}, turn.step, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=cache-inspector}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/cache-inspector",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [54.27ms]\n(pass) leaves another plugin pane untouched [22.76ms]\n(pass) valid controls and behavior on terminal [25.42ms]\n(pass) valid controls and behavior on desktop [18.81ms]\n(pass) capture native render tree for fixture preview [18.44ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.45s]\n[Captured native render tree for cache-inspector]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [63.97ms]\n(pass) leaves another plugin pane untouched [23.23ms]\n(pass) valid controls and behavior on terminal [37.28ms]\n(pass) valid controls and behavior on desktop [21.14ms]\n(pass) capture native render tree for fixture preview [20.55ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.43s]\n[Captured native render tree for cache-inspector]\n"
         }
       ]
     },
@@ -56,12 +56,12 @@
         {
           "command": "claude plugin validate mods/tool-timing --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/tool-timing/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/tool-timing/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=tool-timing}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now, $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/tool-timing/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/tool-timing/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=tool-timing}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=tool-timing}\n  \u276f ./register.js gating hook without .catch: tool.call\n  \u276f ./register.js calls: $.clock.now, $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/tool-timing",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [53.36ms]\n(pass) leaves another plugin pane untouched [22.55ms]\n(pass) valid controls and behavior on terminal [25.43ms]\n(pass) valid controls and behavior on desktop [20.08ms]\n(pass) capture native render tree for fixture preview [19.74ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.46s]\n[Captured native render tree for tool-timing]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [63.83ms]\n(pass) leaves another plugin pane untouched [23.29ms]\n(pass) valid controls and behavior on terminal [34.23ms]\n(pass) valid controls and behavior on desktop [17.54ms]\n(pass) capture native render tree for fixture preview [22.47ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.42s]\n[Captured native render tree for tool-timing]\n"
         }
       ]
     },
@@ -72,12 +72,12 @@
         {
           "command": "claude plugin validate mods/error-inbox --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/error-inbox/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/error-inbox/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=error-inbox}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/error-inbox/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/error-inbox/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=error-inbox}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=error-inbox}\n  \u276f ./register.js gating hook without .catch: tool.call\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/error-inbox",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [31.91ms]\n(pass) leaves another plugin pane untouched [21.57ms]\n(pass) valid controls and behavior on terminal [23.74ms]\n(pass) valid controls and behavior on desktop [19.70ms]\n(pass) capture native render tree for fixture preview [19.48ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for error-inbox]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.85ms]\n(pass) leaves another plugin pane untouched [19.45ms]\n(pass) valid controls and behavior on terminal [23.97ms]\n(pass) valid controls and behavior on desktop [20.34ms]\n(pass) capture native render tree for fixture preview [17.16ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for error-inbox]\n"
         }
       ]
     },
@@ -88,12 +88,12 @@
         {
           "command": "claude plugin validate mods/edit-heatmap --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/edit-heatmap/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/edit-heatmap/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=edit-heatmap}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/edit-heatmap/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/edit-heatmap/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=edit-heatmap}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=edit-heatmap}\n  \u276f ./register.js gating hook without .catch: tool.call{tool=Edit|Write}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/edit-heatmap",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [31.99ms]\n(pass) leaves another plugin pane untouched [21.54ms]\n(pass) valid controls and behavior on terminal [21.06ms]\n(pass) valid controls and behavior on desktop [18.70ms]\n(pass) capture native render tree for fixture preview [22.69ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for edit-heatmap]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [36.67ms]\n(pass) leaves another plugin pane untouched [19.64ms]\n(pass) valid controls and behavior on terminal [18.94ms]\n(pass) valid controls and behavior on desktop [17.12ms]\n(pass) capture native render tree for fixture preview [27.16ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for edit-heatmap]\n"
         }
       ]
     },
@@ -104,12 +104,12 @@
         {
           "command": "claude plugin validate mods/turn-timeline --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/turn-timeline/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/turn-timeline/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=turn-timeline}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/turn-timeline/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/turn-timeline/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=turn-timeline}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=turn-timeline}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/turn-timeline",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [32.16ms]\n(pass) leaves another plugin pane untouched [21.88ms]\n(pass) valid controls and behavior on terminal [23.21ms]\n(pass) valid controls and behavior on desktop [19.09ms]\n(pass) capture native render tree for fixture preview [19.90ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for turn-timeline]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [31.68ms]\n(pass) leaves another plugin pane untouched [21.90ms]\n(pass) valid controls and behavior on terminal [19.12ms]\n(pass) valid controls and behavior on desktop [22.17ms]\n(pass) capture native render tree for fixture preview [20.12ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for turn-timeline]\n"
         }
       ]
     },
@@ -120,12 +120,12 @@
         {
           "command": "claude plugin validate mods/agent-board --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/agent-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/agent-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=agent-board}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.agent.list (via draw), $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/agent-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/agent-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=agent-board}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=agent-board}\n  \u276f ./register.js calls: $.agent.list (via draw), $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/agent-board",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [32.13ms]\n(pass) leaves another plugin pane untouched [21.78ms]\n(pass) valid controls and behavior on terminal [20.82ms]\n(pass) valid controls and behavior on desktop [18.01ms]\n(pass) capture native render tree for fixture preview [18.90ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for agent-board]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.25ms]\n(pass) leaves another plugin pane untouched [21.03ms]\n(pass) valid controls and behavior on terminal [26.21ms]\n(pass) valid controls and behavior on desktop [20.18ms]\n(pass) capture native render tree for fixture preview [17.24ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.32s]\n[Captured native render tree for agent-board]\n"
         }
       ]
     },
@@ -136,12 +136,12 @@
         {
           "command": "claude plugin validate mods/branch-board --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/branch-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/branch-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=branch-board}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/branch-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/branch-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=branch-board}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=branch-board}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/branch-board",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [38.10ms]\n(pass) leaves another plugin pane untouched [22.05ms]\n(pass) valid controls and behavior on terminal [22.24ms]\n(pass) valid controls and behavior on desktop [20.06ms]\n(pass) capture native render tree for fixture preview [18.40ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for branch-board]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.13ms]\n(pass) leaves another plugin pane untouched [19.67ms]\n(pass) valid controls and behavior on terminal [22.66ms]\n(pass) valid controls and behavior on desktop [22.78ms]\n(pass) capture native render tree for fixture preview [19.18ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.30s]\n[Captured native render tree for branch-board]\n"
         }
       ]
     },
@@ -152,12 +152,12 @@
         {
           "command": "claude plugin validate mods/staged-review --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/staged-review/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/staged-review/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=staged-review}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/staged-review/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/staged-review/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=staged-review}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=staged-review}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/staged-review",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [37.67ms]\n(pass) leaves another plugin pane untouched [22.26ms]\n(pass) valid controls and behavior on terminal [21.99ms]\n(pass) valid controls and behavior on desktop [21.69ms]\n(pass) capture native render tree for fixture preview [18.21ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for staged-review]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [32.71ms]\n(pass) leaves another plugin pane untouched [21.91ms]\n(pass) valid controls and behavior on terminal [28.11ms]\n(pass) valid controls and behavior on desktop [22.86ms]\n(pass) capture native render tree for fixture preview [17.19ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.30s]\n[Captured native render tree for staged-review]\n"
         }
       ]
     },
@@ -168,12 +168,12 @@
         {
           "command": "claude plugin validate mods/commit-browser --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/commit-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/commit-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=commit-browser}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/commit-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/commit-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=commit-browser}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=commit-browser}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/commit-browser",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [38.49ms]\n(pass) leaves another plugin pane untouched [21.48ms]\n(pass) valid controls and behavior on terminal [22.28ms]\n(pass) valid controls and behavior on desktop [19.25ms]\n(pass) capture native render tree for fixture preview [18.48ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for commit-browser]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [37.09ms]\n(pass) leaves another plugin pane untouched [21.71ms]\n(pass) valid controls and behavior on terminal [22.47ms]\n(pass) valid controls and behavior on desktop [26.20ms]\n(pass) capture native render tree for fixture preview [28.11ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.32s]\n[Captured native render tree for commit-browser]\n"
         }
       ]
     },
@@ -184,12 +184,12 @@
         {
           "command": "claude plugin validate mods/stash-browser --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/stash-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/stash-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=stash-browser}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/stash-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/stash-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=stash-browser}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=stash-browser}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/stash-browser",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [37.82ms]\n(pass) leaves another plugin pane untouched [22.27ms]\n(pass) valid controls and behavior on terminal [23.32ms]\n(pass) valid controls and behavior on desktop [23.56ms]\n(pass) capture native render tree for fixture preview [19.09ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.36s]\n[Captured native render tree for stash-browser]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [36.72ms]\n(pass) leaves another plugin pane untouched [23.69ms]\n(pass) valid controls and behavior on terminal [26.26ms]\n(pass) valid controls and behavior on desktop [19.52ms]\n(pass) capture native render tree for fixture preview [19.60ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.30s]\n[Captured native render tree for stash-browser]\n"
         }
       ]
     },
@@ -200,12 +200,12 @@
         {
           "command": "claude plugin validate mods/worktree-map --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/worktree-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/worktree-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=worktree-map}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/worktree-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/worktree-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=worktree-map}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=worktree-map}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/worktree-map",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.80ms]\n(pass) leaves another plugin pane untouched [21.11ms]\n(pass) valid controls and behavior on terminal [25.17ms]\n(pass) valid controls and behavior on desktop [19.70ms]\n(pass) capture native render tree for fixture preview [17.61ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for worktree-map]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [31.85ms]\n(pass) leaves another plugin pane untouched [26.34ms]\n(pass) valid controls and behavior on terminal [30.22ms]\n(pass) valid controls and behavior on desktop [21.87ms]\n(pass) capture native render tree for fixture preview [32.49ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for worktree-map]\n"
         }
       ]
     },
@@ -216,12 +216,12 @@
         {
           "command": "claude plugin validate mods/conflict-radar --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/conflict-radar/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/conflict-radar/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=conflict-radar}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/conflict-radar/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/conflict-radar/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=conflict-radar}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=conflict-radar}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/conflict-radar",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.82ms]\n(pass) leaves another plugin pane untouched [20.87ms]\n(pass) valid controls and behavior on terminal [21.11ms]\n(pass) valid controls and behavior on desktop [19.65ms]\n(pass) capture native render tree for fixture preview [19.43ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for conflict-radar]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [40.82ms]\n(pass) leaves another plugin pane untouched [22.56ms]\n(pass) valid controls and behavior on terminal [34.86ms]\n(pass) valid controls and behavior on desktop [39.99ms]\n(pass) capture native render tree for fixture preview [34.01ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.39s]\n[Captured native render tree for conflict-radar]\n"
         }
       ]
     },
@@ -232,12 +232,12 @@
         {
           "command": "claude plugin validate mods/blame-view --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/blame-view/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/blame-view/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=blame-view}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/blame-view/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/blame-view/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=blame-view}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=blame-view}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/blame-view",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.62ms]\n(pass) leaves another plugin pane untouched [21.08ms]\n(pass) valid controls and behavior on terminal [24.51ms]\n(pass) valid controls and behavior on desktop [22.43ms]\n(pass) capture native render tree for fixture preview [17.56ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for blame-view]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [52.63ms]\n(pass) leaves another plugin pane untouched [43.05ms]\n(pass) valid controls and behavior on terminal [44.33ms]\n(pass) valid controls and behavior on desktop [33.60ms]\n(pass) capture native render tree for fixture preview [46.98ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.44s]\n[Captured native render tree for blame-view]\n"
         }
       ]
     },
@@ -248,12 +248,12 @@
         {
           "command": "claude plugin validate mods/ignore-check --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/ignore-check/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/ignore-check/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=ignore-check}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/ignore-check/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/ignore-check/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=ignore-check}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=ignore-check}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/ignore-check",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.62ms]\n(pass) leaves another plugin pane untouched [21.02ms]\n(pass) valid controls and behavior on terminal [21.07ms]\n(pass) valid controls and behavior on desktop [19.58ms]\n(pass) capture native render tree for fixture preview [19.44ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for ignore-check]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [68.52ms]\n(pass) leaves another plugin pane untouched [41.09ms]\n(pass) valid controls and behavior on terminal [52.86ms]\n(pass) valid controls and behavior on desktop [33.81ms]\n(pass) capture native render tree for fixture preview [33.61ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.49s]\n[Captured native render tree for ignore-check]\n"
         }
       ]
     },
@@ -264,12 +264,12 @@
         {
           "command": "claude plugin validate mods/file-tree --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/file-tree/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/file-tree/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=file-tree}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.list (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/file-tree/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/file-tree/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=file-tree}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=file-tree}\n  \u276f ./register.js calls: $.command.register, $.fs.list (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/file-tree",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [90.02ms]\n(pass) leaves another plugin pane untouched [35.16ms]\n(pass) valid controls and behavior on terminal [40.22ms]\n(pass) valid controls and behavior on desktop [30.97ms]\n(pass) capture native render tree for fixture preview [21.96ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.57s]\n[Captured native render tree for file-tree]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [44.85ms]\n(pass) leaves another plugin pane untouched [45.54ms]\n(pass) valid controls and behavior on terminal [24.38ms]\n(pass) valid controls and behavior on desktop [28.34ms]\n(pass) capture native render tree for fixture preview [17.74ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.41s]\n[Captured native render tree for file-tree]\n"
         }
       ]
     },
@@ -280,12 +280,12 @@
         {
           "command": "claude plugin validate mods/package-scripts --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/package-scripts/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/package-scripts/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=package-scripts}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/package-scripts/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/package-scripts/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=package-scripts}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=package-scripts}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/package-scripts",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [85.71ms]\n(pass) leaves another plugin pane untouched [35.25ms]\n(pass) valid controls and behavior on terminal [35.71ms]\n(pass) valid controls and behavior on desktop [32.53ms]\n(pass) capture native render tree for fixture preview [22.30ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.57s]\n[Captured native render tree for package-scripts]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [41.45ms]\n(pass) leaves another plugin pane untouched [19.46ms]\n(pass) valid controls and behavior on terminal [21.38ms]\n(pass) valid controls and behavior on desktop [23.05ms]\n(pass) capture native render tree for fixture preview [18.38ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.38s]\n[Captured native render tree for package-scripts]\n"
         }
       ]
     },
@@ -296,12 +296,12 @@
         {
           "command": "claude plugin validate mods/dependency-table --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/dependency-table/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/dependency-table/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=dependency-table}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/dependency-table/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/dependency-table/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=dependency-table}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=dependency-table}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/dependency-table",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [94.65ms]\n(pass) leaves another plugin pane untouched [35.48ms]\n(pass) valid controls and behavior on terminal [31.64ms]\n(pass) valid controls and behavior on desktop [31.08ms]\n(pass) capture native render tree for fixture preview [19.73ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.58s]\n[Captured native render tree for dependency-table]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [34.62ms]\n(pass) leaves another plugin pane untouched [21.12ms]\n(pass) valid controls and behavior on terminal [29.65ms]\n(pass) valid controls and behavior on desktop [18.61ms]\n(pass) capture native render tree for fixture preview [17.94ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.39s]\n[Captured native render tree for dependency-table]\n"
         }
       ]
     },
@@ -312,12 +312,12 @@
         {
           "command": "claude plugin validate mods/todo-finder --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/todo-finder/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/todo-finder/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=todo-finder}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/todo-finder/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/todo-finder/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=todo-finder}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=todo-finder}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/todo-finder",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [83.52ms]\n(pass) leaves another plugin pane untouched [31.15ms]\n(pass) valid controls and behavior on terminal [38.13ms]\n(pass) valid controls and behavior on desktop [33.13ms]\n(pass) capture native render tree for fixture preview [23.67ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.57s]\n[Captured native render tree for todo-finder]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.34ms]\n(pass) leaves another plugin pane untouched [21.26ms]\n(pass) valid controls and behavior on terminal [23.28ms]\n(pass) valid controls and behavior on desktop [18.39ms]\n(pass) capture native render tree for fixture preview [15.61ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for todo-finder]\n"
         }
       ]
     },
@@ -328,12 +328,12 @@
         {
           "command": "claude plugin validate mods/markdown-map --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/markdown-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/markdown-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=markdown-map}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/markdown-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/markdown-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=markdown-map}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=markdown-map}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/markdown-map",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [112.49ms]\n(pass) leaves another plugin pane untouched [123.01ms]\n(pass) valid controls and behavior on terminal [307.02ms]\n(pass) valid controls and behavior on desktop [116.16ms]\n(pass) capture native render tree for fixture preview [182.30ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.56s]\n[Captured native render tree for markdown-map]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.03ms]\n(pass) leaves another plugin pane untouched [19.76ms]\n(pass) valid controls and behavior on terminal [35.13ms]\n(pass) valid controls and behavior on desktop [29.52ms]\n(pass) capture native render tree for fixture preview [17.77ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for markdown-map]\n"
         }
       ]
     },
@@ -344,12 +344,12 @@
         {
           "command": "claude plugin validate mods/json-browser --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/json-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/json-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=json-browser}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/json-browser/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/json-browser/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=json-browser}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=json-browser}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/json-browser",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [111.10ms]\n(pass) leaves another plugin pane untouched [126.29ms]\n(pass) valid controls and behavior on terminal [291.79ms]\n(pass) valid controls and behavior on desktop [69.20ms]\n(pass) capture native render tree for fixture preview [88.53ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.45s]\n[Captured native render tree for json-browser]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.13ms]\n(pass) leaves another plugin pane untouched [19.88ms]\n(pass) valid controls and behavior on terminal [28.23ms]\n(pass) valid controls and behavior on desktop [28.13ms]\n(pass) capture native render tree for fixture preview [24.58ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for json-browser]\n"
         }
       ]
     },
@@ -360,12 +360,12 @@
         {
           "command": "claude plugin validate mods/csv-table --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/csv-table/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/csv-table/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=csv-table}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/csv-table/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/csv-table/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=csv-table}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=csv-table}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/csv-table",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [124.06ms]\n(pass) leaves another plugin pane untouched [378.05ms]\n(pass) valid controls and behavior on terminal [81.55ms]\n(pass) valid controls and behavior on desktop [213.57ms]\n(pass) capture native render tree for fixture preview [215.42ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.69s]\n[Captured native render tree for csv-table]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.10ms]\n(pass) leaves another plugin pane untouched [19.57ms]\n(pass) valid controls and behavior on terminal [28.00ms]\n(pass) valid controls and behavior on desktop [19.99ms]\n(pass) capture native render tree for fixture preview [22.39ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.30s]\n[Captured native render tree for csv-table]\n"
         }
       ]
     },
@@ -376,12 +376,12 @@
         {
           "command": "claude plugin validate mods/log-viewer --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/log-viewer/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/log-viewer/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=log-viewer}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/log-viewer/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/log-viewer/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=log-viewer}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=log-viewer}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/log-viewer",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [134.27ms]\n(pass) leaves another plugin pane untouched [368.71ms]\n(pass) valid controls and behavior on terminal [78.60ms]\n(pass) valid controls and behavior on desktop [155.41ms]\n(pass) capture native render tree for fixture preview [129.59ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.66s]\n[Captured native render tree for log-viewer]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [42.73ms]\n(pass) leaves another plugin pane untouched [32.48ms]\n(pass) valid controls and behavior on terminal [24.26ms]\n(pass) valid controls and behavior on desktop [29.31ms]\n(pass) capture native render tree for fixture preview [35.97ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.33s]\n[Captured native render tree for log-viewer]\n"
         }
       ]
     },
@@ -392,12 +392,12 @@
         {
           "command": "claude plugin validate mods/env-example --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/env-example/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/env-example/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=env-example}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/env-example/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/env-example/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=env-example}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=env-example}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/env-example",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [59.37ms]\n(pass) leaves another plugin pane untouched [35.55ms]\n(pass) valid controls and behavior on terminal [65.00ms]\n(pass) valid controls and behavior on desktop [46.53ms]\n(pass) capture native render tree for fixture preview [27.55ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.62s]\n[Captured native render tree for env-example]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [35.40ms]\n(pass) leaves another plugin pane untouched [24.72ms]\n(pass) valid controls and behavior on terminal [29.27ms]\n(pass) valid controls and behavior on desktop [22.96ms]\n(pass) capture native render tree for fixture preview [24.04ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for env-example]\n"
         }
       ]
     },
@@ -408,12 +408,12 @@
         {
           "command": "claude plugin validate mods/file-compare --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/file-compare/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/file-compare/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=file-compare}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/file-compare/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/file-compare/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=file-compare}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=file-compare}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/file-compare",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [61.40ms]\n(pass) leaves another plugin pane untouched [31.24ms]\n(pass) valid controls and behavior on terminal [62.53ms]\n(pass) valid controls and behavior on desktop [43.99ms]\n(pass) capture native render tree for fixture preview [30.34ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.62s]\n[Captured native render tree for file-compare]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [34.43ms]\n(pass) leaves another plugin pane untouched [22.91ms]\n(pass) valid controls and behavior on terminal [30.35ms]\n(pass) valid controls and behavior on desktop [22.58ms]\n(pass) capture native render tree for fixture preview [26.25ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for file-compare]\n"
         }
       ]
     },
@@ -424,12 +424,12 @@
         {
           "command": "claude plugin validate mods/scratchpad --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/scratchpad/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/scratchpad/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=scratchpad}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/scratchpad/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/scratchpad/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=scratchpad}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=scratchpad}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/scratchpad",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [60.55ms]\n(pass) leaves another plugin pane untouched [30.21ms]\n(pass) valid controls and behavior on terminal [69.09ms]\n(pass) valid controls and behavior on desktop [46.00ms]\n(pass) capture native render tree for fixture preview [30.67ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.62s]\n[Captured native render tree for scratchpad]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [40.30ms]\n(pass) leaves another plugin pane untouched [26.30ms]\n(pass) valid controls and behavior on terminal [30.24ms]\n(pass) valid controls and behavior on desktop [22.96ms]\n(pass) capture native render tree for fixture preview [22.22ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.31s]\n[Captured native render tree for scratchpad]\n"
         }
       ]
     },
@@ -440,12 +440,12 @@
         {
           "command": "claude plugin validate mods/task-board --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/task-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/task-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=task-board}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via load), $.store.set (via draw, save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/task-board/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/task-board/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=task-board}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=task-board}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via load), $.store.set (via draw, save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/task-board",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [68.18ms]\n(pass) leaves another plugin pane untouched [50.70ms]\n(pass) valid controls and behavior on terminal [59.97ms]\n(pass) valid controls and behavior on desktop [41.10ms]\n(pass) capture native render tree for fixture preview [42.66ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.63s]\n[Captured native render tree for task-board]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [41.95ms]\n(pass) leaves another plugin pane untouched [27.53ms]\n(pass) valid controls and behavior on terminal [28.33ms]\n(pass) valid controls and behavior on desktop [28.10ms]\n(pass) capture native render tree for fixture preview [33.42ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.33s]\n[Captured native render tree for task-board]\n"
         }
       ]
     },
@@ -456,12 +456,12 @@
         {
           "command": "claude plugin validate mods/decision-log --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/decision-log/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/decision-log/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=decision-log}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/decision-log/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/decision-log/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=decision-log}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=decision-log}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/decision-log",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [59.90ms]\n(pass) leaves another plugin pane untouched [56.70ms]\n(pass) valid controls and behavior on terminal [66.44ms]\n(pass) valid controls and behavior on desktop [40.88ms]\n(pass) capture native render tree for fixture preview [52.13ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.60s]\n[Captured native render tree for decision-log]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [34.31ms]\n(pass) leaves another plugin pane untouched [24.06ms]\n(pass) valid controls and behavior on terminal [31.40ms]\n(pass) valid controls and behavior on desktop [30.44ms]\n(pass) capture native render tree for fixture preview [19.20ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.33s]\n[Captured native render tree for decision-log]\n"
         }
       ]
     },
@@ -472,12 +472,12 @@
         {
           "command": "claude plugin validate mods/snippet-shelf --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/snippet-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/snippet-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=snippet-shelf}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/snippet-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/snippet-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=snippet-shelf}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=snippet-shelf}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/snippet-shelf",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [72.00ms]\n(pass) leaves another plugin pane untouched [53.07ms]\n(pass) valid controls and behavior on terminal [80.95ms]\n(pass) valid controls and behavior on desktop [55.45ms]\n(pass) capture native render tree for fixture preview [68.71ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.64s]\n[Captured native render tree for snippet-shelf]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [33.20ms]\n(pass) leaves another plugin pane untouched [20.78ms]\n(pass) valid controls and behavior on terminal [34.42ms]\n(pass) valid controls and behavior on desktop [26.44ms]\n(pass) capture native render tree for fixture preview [24.38ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.33s]\n[Captured native render tree for snippet-shelf]\n"
         }
       ]
     },
@@ -488,12 +488,12 @@
         {
           "command": "claude plugin validate mods/link-shelf --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/link-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/link-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=link-shelf}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/link-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/link-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=link-shelf}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=link-shelf}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/link-shelf",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [58.25ms]\n(pass) leaves another plugin pane untouched [52.31ms]\n(pass) valid controls and behavior on terminal [59.47ms]\n(pass) valid controls and behavior on desktop [46.72ms]\n(pass) capture native render tree for fixture preview [43.61ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.58s]\n[Captured native render tree for link-shelf]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [38.97ms]\n(pass) leaves another plugin pane untouched [22.99ms]\n(pass) valid controls and behavior on terminal [32.98ms]\n(pass) valid controls and behavior on desktop [28.48ms]\n(pass) capture native render tree for fixture preview [21.97ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.33s]\n[Captured native render tree for link-shelf]\n"
         }
       ]
     },
@@ -504,12 +504,12 @@
         {
           "command": "claude plugin validate mods/prompt-shelf --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/prompt-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/prompt-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=prompt-shelf}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.prompt.fill (via draw), $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/prompt-shelf/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/prompt-shelf/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=prompt-shelf}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=prompt-shelf}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.prompt.fill (via draw), $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/prompt-shelf",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [62.78ms]\n(pass) leaves another plugin pane untouched [59.15ms]\n(pass) valid controls and behavior on terminal [68.58ms]\n(pass) valid controls and behavior on desktop [56.92ms]\n(pass) capture native render tree for fixture preview [63.28ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.62s]\n[Captured native render tree for prompt-shelf]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [41.30ms]\n(pass) leaves another plugin pane untouched [22.54ms]\n(pass) valid controls and behavior on terminal [32.02ms]\n(pass) valid controls and behavior on desktop [35.05ms]\n(pass) capture native render tree for fixture preview [27.31ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for prompt-shelf]\n"
         }
       ]
     },
@@ -520,12 +520,12 @@
         {
           "command": "claude plugin validate mods/release-checklist --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/release-checklist/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/release-checklist/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=release-checklist}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via load), $.store.set (via draw, save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/release-checklist/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/release-checklist/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=release-checklist}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=release-checklist}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via load), $.store.set (via draw, save), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/release-checklist",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [165.38ms]\n(pass) leaves another plugin pane untouched [37.68ms]\n(pass) valid controls and behavior on terminal [69.66ms]\n(pass) valid controls and behavior on desktop [119.04ms]\n(pass) capture native render tree for fixture preview [88.01ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.09s]\n[Captured native render tree for release-checklist]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [43.72ms]\n(pass) leaves another plugin pane untouched [27.68ms]\n(pass) valid controls and behavior on terminal [31.97ms]\n(pass) valid controls and behavior on desktop [36.66ms]\n(pass) capture native render tree for fixture preview [27.19ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for release-checklist]\n"
         }
       ]
     },
@@ -536,12 +536,12 @@
         {
           "command": "claude plugin validate mods/handoff-notes --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/handoff-notes/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/handoff-notes/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=handoff-notes}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/handoff-notes/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/handoff-notes/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=handoff-notes}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=handoff-notes}\n  \u276f ./register.js calls: $.clock.now (via save), $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via load), $.store.set (via save), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/handoff-notes",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [152.08ms]\n(pass) leaves another plugin pane untouched [45.78ms]\n(pass) valid controls and behavior on terminal [54.88ms]\n(pass) valid controls and behavior on desktop [75.67ms]\n(pass) capture native render tree for fixture preview [68.17ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.00s]\n[Captured native render tree for handoff-notes]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [41.65ms]\n(pass) leaves another plugin pane untouched [38.85ms]\n(pass) valid controls and behavior on terminal [27.24ms]\n(pass) valid controls and behavior on desktop [28.22ms]\n(pass) capture native render tree for fixture preview [28.06ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for handoff-notes]\n"
         }
       ]
     },
@@ -552,12 +552,12 @@
         {
           "command": "claude plugin validate mods/regex-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/regex-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/regex-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=regex-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/regex-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/regex-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=regex-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=regex-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/regex-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [78.37ms]\n(pass) leaves another plugin pane untouched [86.76ms]\n(pass) valid controls and behavior on terminal [68.12ms]\n(pass) valid controls and behavior on desktop [62.78ms]\n(pass) capture native render tree for fixture preview [70.63ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.99s]\n[Captured native render tree for regex-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [37.18ms]\n(pass) leaves another plugin pane untouched [24.48ms]\n(pass) valid controls and behavior on terminal [32.81ms]\n(pass) valid controls and behavior on desktop [27.93ms]\n(pass) capture native render tree for fixture preview [20.73ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.32s]\n[Captured native render tree for regex-lab]\n"
         }
       ]
     },
@@ -568,12 +568,12 @@
         {
           "command": "claude plugin validate mods/json-format --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/json-format/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/json-format/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=json-format}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/json-format/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/json-format/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=json-format}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=json-format}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/json-format",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [108.45ms]\n(pass) leaves another plugin pane untouched [41.62ms]\n(pass) valid controls and behavior on terminal [80.07ms]\n(pass) valid controls and behavior on desktop [58.71ms]\n(pass) capture native render tree for fixture preview [45.35ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.93s]\n[Captured native render tree for json-format]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [39.09ms]\n(pass) leaves another plugin pane untouched [22.24ms]\n(pass) valid controls and behavior on terminal [28.77ms]\n(pass) valid controls and behavior on desktop [31.29ms]\n(pass) capture native render tree for fixture preview [20.51ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.34s]\n[Captured native render tree for json-format]\n"
         }
       ]
     },
@@ -584,12 +584,12 @@
         {
           "command": "claude plugin validate mods/url-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/url-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/url-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=url-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/url-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/url-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=url-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=url-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/url-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [48.14ms]\n(pass) leaves another plugin pane untouched [24.76ms]\n(pass) valid controls and behavior on terminal [35.57ms]\n(pass) valid controls and behavior on desktop [31.65ms]\n(pass) capture native render tree for fixture preview [28.09ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.43s]\n[Captured native render tree for url-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [44.22ms]\n(pass) leaves another plugin pane untouched [29.13ms]\n(pass) valid controls and behavior on terminal [32.29ms]\n(pass) valid controls and behavior on desktop [27.85ms]\n(pass) capture native render tree for fixture preview [27.16ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.40s]\n[Captured native render tree for url-lab]\n"
         }
       ]
     },
@@ -600,12 +600,12 @@
         {
           "command": "claude plugin validate mods/base64-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/base64-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/base64-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=base64-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/base64-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/base64-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=base64-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=base64-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/base64-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [46.95ms]\n(pass) leaves another plugin pane untouched [30.90ms]\n(pass) valid controls and behavior on terminal [31.21ms]\n(pass) valid controls and behavior on desktop [28.16ms]\n(pass) capture native render tree for fixture preview [31.88ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.43s]\n[Captured native render tree for base64-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [43.71ms]\n(pass) leaves another plugin pane untouched [29.71ms]\n(pass) valid controls and behavior on terminal [31.80ms]\n(pass) valid controls and behavior on desktop [28.39ms]\n(pass) capture native render tree for fixture preview [27.11ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.40s]\n[Captured native render tree for base64-lab]\n"
         }
       ]
     },
@@ -616,12 +616,12 @@
         {
           "command": "claude plugin validate mods/time-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/time-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/time-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=time-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/time-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/time-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=time-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=time-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/time-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [47.56ms]\n(pass) leaves another plugin pane untouched [25.99ms]\n(pass) valid controls and behavior on terminal [30.10ms]\n(pass) valid controls and behavior on desktop [24.80ms]\n(pass) capture native render tree for fixture preview [28.09ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.42s]\n[Captured native render tree for time-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [43.76ms]\n(pass) leaves another plugin pane untouched [27.63ms]\n(pass) valid controls and behavior on terminal [26.64ms]\n(pass) valid controls and behavior on desktop [24.45ms]\n(pass) capture native render tree for fixture preview [23.53ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.38s]\n[Captured native render tree for time-lab]\n"
         }
       ]
     },
@@ -632,12 +632,12 @@
         {
           "command": "claude plugin validate mods/hash-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/hash-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/hash-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=hash-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/hash-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/hash-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=hash-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=hash-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/hash-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [49.08ms]\n(pass) leaves another plugin pane untouched [26.61ms]\n(pass) valid controls and behavior on terminal [30.86ms]\n(pass) valid controls and behavior on desktop [26.57ms]\n(pass) capture native render tree for fixture preview [23.36ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.41s]\n[Captured native render tree for hash-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [50.40ms]\n(pass) leaves another plugin pane untouched [27.81ms]\n(pass) valid controls and behavior on terminal [31.34ms]\n(pass) valid controls and behavior on desktop [21.06ms]\n(pass) capture native render tree for fixture preview [31.90ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.39s]\n[Captured native render tree for hash-lab]\n"
         }
       ]
     },
@@ -648,12 +648,12 @@
         {
           "command": "claude plugin validate mods/color-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/color-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/color-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=color-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/color-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/color-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=color-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=color-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/color-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [50.12ms]\n(pass) leaves another plugin pane untouched [35.99ms]\n(pass) valid controls and behavior on terminal [32.08ms]\n(pass) valid controls and behavior on desktop [38.96ms]\n(pass) capture native render tree for fixture preview [31.31ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.48s]\n[Captured native render tree for color-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [40.85ms]\n(pass) leaves another plugin pane untouched [33.14ms]\n(pass) valid controls and behavior on terminal [33.26ms]\n(pass) valid controls and behavior on desktop [30.25ms]\n(pass) capture native render tree for fixture preview [23.18ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.37s]\n[Captured native render tree for color-lab]\n"
         }
       ]
     },
@@ -664,12 +664,12 @@
         {
           "command": "claude plugin validate mods/uuid-lab --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/uuid-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/uuid-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=uuid-lab}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/uuid-lab/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/uuid-lab/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=uuid-lab}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=uuid-lab}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/uuid-lab",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [49.22ms]\n(pass) leaves another plugin pane untouched [39.21ms]\n(pass) valid controls and behavior on terminal [36.61ms]\n(pass) valid controls and behavior on desktop [41.42ms]\n(pass) capture native render tree for fixture preview [41.59ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.49s]\n[Captured native render tree for uuid-lab]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [40.01ms]\n(pass) leaves another plugin pane untouched [25.37ms]\n(pass) valid controls and behavior on terminal [28.69ms]\n(pass) valid controls and behavior on desktop [31.67ms]\n(pass) capture native render tree for fixture preview [22.26ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for uuid-lab]\n"
         }
       ]
     },
@@ -680,12 +680,12 @@
         {
           "command": "claude plugin validate mods/text-counter --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/text-counter/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/text-counter/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=text-counter}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/text-counter/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/text-counter/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=text-counter}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=text-counter}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/text-counter",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [46.35ms]\n(pass) leaves another plugin pane untouched [28.52ms]\n(pass) valid controls and behavior on terminal [37.72ms]\n(pass) valid controls and behavior on desktop [35.03ms]\n(pass) capture native render tree for fixture preview [31.62ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.47s]\n[Captured native render tree for text-counter]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [38.05ms]\n(pass) leaves another plugin pane untouched [24.71ms]\n(pass) valid controls and behavior on terminal [31.57ms]\n(pass) valid controls and behavior on desktop [30.18ms]\n(pass) capture native render tree for fixture preview [22.69ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.36s]\n[Captured native render tree for text-counter]\n"
         }
       ]
     },
@@ -696,12 +696,12 @@
         {
           "command": "claude plugin validate mods/ascii-flipbook --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/ascii-flipbook/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/ascii-flipbook/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=ascii-flipbook}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/ascii-flipbook/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/ascii-flipbook/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=ascii-flipbook}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=ascii-flipbook}\n  \u276f ./register.js calls: $.clock.every, $.command.register, $.fs.read (via load), $.fs.stat (via load), $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/ascii-flipbook",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [51.16ms]\n(pass) leaves another plugin pane untouched [39.09ms]\n(pass) valid controls and behavior on terminal [36.51ms]\n(pass) valid controls and behavior on desktop [35.75ms]\n(pass) capture native render tree for fixture preview [32.33ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.48s]\n[Captured native render tree for ascii-flipbook]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [44.37ms]\n(pass) leaves another plugin pane untouched [29.76ms]\n(pass) valid controls and behavior on terminal [40.08ms]\n(pass) valid controls and behavior on desktop [23.40ms]\n(pass) capture native render tree for fixture preview [15.41ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.41s]\n[Captured native render tree for ascii-flipbook]\n"
         }
       ]
     },
@@ -712,12 +712,12 @@
         {
           "command": "claude plugin validate mods/focus-clock --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/focus-clock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/focus-clock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=focus-clock}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/focus-clock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/focus-clock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=focus-clock}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=focus-clock}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/focus-clock",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [46.11ms]\n(pass) leaves another plugin pane untouched [28.17ms]\n(pass) valid controls and behavior on terminal [46.29ms]\n(pass) valid controls and behavior on desktop [78.94ms]\n(pass) capture native render tree for fixture preview [163.82ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.62s]\n[Captured native render tree for focus-clock]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [106.99ms]\n(pass) leaves another plugin pane untouched [56.95ms]\n(pass) valid controls and behavior on terminal [75.99ms]\n(pass) valid controls and behavior on desktop [45.74ms]\n(pass) capture native render tree for fixture preview [232.80ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [1.00s]\n[Captured native render tree for focus-clock]\n"
         }
       ]
     },
@@ -728,12 +728,12 @@
         {
           "command": "claude plugin validate mods/stopwatch --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/stopwatch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/stopwatch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=stopwatch}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.clock.now (via draw), $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/stopwatch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/stopwatch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=stopwatch}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=stopwatch}\n  \u276f ./register.js calls: $.clock.every, $.clock.now (via draw), $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/stopwatch",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [43.10ms]\n(pass) leaves another plugin pane untouched [26.99ms]\n(pass) valid controls and behavior on terminal [41.03ms]\n(pass) valid controls and behavior on desktop [71.14ms]\n(pass) capture native render tree for fixture preview [62.35ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.49s]\n[Captured native render tree for stopwatch]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [62.73ms]\n(pass) leaves another plugin pane untouched [51.05ms]\n(pass) valid controls and behavior on terminal [93.62ms]\n(pass) valid controls and behavior on desktop [59.71ms]\n(pass) capture native render tree for fixture preview [96.83ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.90s]\n[Captured native render tree for stopwatch]\n"
         }
       ]
     },
@@ -744,12 +744,12 @@
         {
           "command": "claude plugin validate mods/test-ledger --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/test-ledger/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/test-ledger/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=test-ledger}, tool.call{tool=Bash}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/test-ledger/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/test-ledger/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=test-ledger}, tool.call{tool=Bash}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=test-ledger}\n  \u276f ./register.js gating hook without .catch: tool.call{tool=Bash}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/test-ledger",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [44.72ms]\n(pass) leaves another plugin pane untouched [37.39ms]\n(pass) valid controls and behavior on terminal [88.60ms]\n(pass) valid controls and behavior on desktop [43.17ms]\n(pass) capture native render tree for fixture preview [26.32ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.48s]\n[Captured native render tree for test-ledger]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [64.71ms]\n(pass) leaves another plugin pane untouched [52.34ms]\n(pass) valid controls and behavior on terminal [83.59ms]\n(pass) valid controls and behavior on desktop [49.61ms]\n(pass) capture native render tree for fixture preview [55.15ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.85s]\n[Captured native render tree for test-ledger]\n"
         }
       ]
     },
@@ -760,12 +760,12 @@
         {
           "command": "claude plugin validate mods/command-history --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/command-history/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/command-history/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=command-history}, tool.call{tool=Bash}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/command-history/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/command-history/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=command-history}, tool.call{tool=Bash}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=command-history}\n  \u276f ./register.js gating hook without .catch: tool.call{tool=Bash}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/command-history",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [43.48ms]\n(pass) leaves another plugin pane untouched [31.61ms]\n(pass) valid controls and behavior on terminal [97.78ms]\n(pass) valid controls and behavior on desktop [37.52ms]\n(pass) capture native render tree for fixture preview [23.91ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.48s]\n[Captured native render tree for command-history]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [107.09ms]\n(pass) leaves another plugin pane untouched [48.82ms]\n(pass) valid controls and behavior on terminal [43.18ms]\n(pass) valid controls and behavior on desktop [38.95ms]\n(pass) capture native render tree for fixture preview [48.55ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.73s]\n[Captured native render tree for command-history]\n"
         }
       ]
     },
@@ -776,12 +776,12 @@
         {
           "command": "claude plugin validate mods/scope-watch --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/scope-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/scope-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=scope-watch}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.cwd, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/scope-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/scope-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=scope-watch}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=scope-watch}\n  \u276f ./register.js gating hook without .catch: tool.call{tool=Edit|Write}\n  \u276f ./register.js calls: $.command.register, $.session.cwd, $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/scope-watch",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [60.11ms]\n(pass) leaves another plugin pane untouched [41.05ms]\n(pass) valid controls and behavior on terminal [39.73ms]\n(pass) valid controls and behavior on desktop [32.24ms]\n(pass) capture native render tree for fixture preview [26.98ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.68s]\n[Captured native render tree for scope-watch]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [38.77ms]\n(pass) leaves another plugin pane untouched [34.87ms]\n(pass) valid controls and behavior on terminal [29.88ms]\n(pass) valid controls and behavior on desktop [27.11ms]\n(pass) capture native render tree for fixture preview [34.25ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.35s]\n[Captured native render tree for scope-watch]\n"
         }
       ]
     },
@@ -792,12 +792,12 @@
         {
           "command": "claude plugin validate mods/read-only-mode --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/read-only-mode/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/read-only-mode/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=read-only-mode}, tool.call{tool=Edit|Write|NotebookEdit|Bash}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/read-only-mode/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/read-only-mode/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=read-only-mode}, tool.call{tool=Edit|Write|NotebookEdit|Bash}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=read-only-mode}\n  \u276f ./register.js gating hook with .catch: tool.call{tool=Edit|Write|NotebookEdit|Bash}\n  \u276f ./register.js calls: $.command.register, $.ui.invalidate, $.ui.open, $.ui.resolve\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/read-only-mode",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [61.15ms]\n(pass) leaves another plugin pane untouched [40.58ms]\n(pass) valid controls and behavior on terminal [33.78ms]\n(pass) valid controls and behavior on desktop [33.89ms]\n(pass) capture native render tree for fixture preview [28.34ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.67s]\n[Captured native render tree for read-only-mode]\n"
+          "output": "\ntests/register.test.ts:\n(pass) registers an immediate command and opens only its pane [42.95ms]\n(pass) leaves another plugin pane untouched [27.63ms]\n(pass) valid controls and behavior on terminal [36.68ms]\n(pass) valid controls and behavior on desktop [25.46ms]\n(pass) capture native render tree for fixture preview [30.92ms]\n\n 5 pass\n 0 fail\nRan 5 tests across 1 file. [0.38s]\n[Captured native render tree for read-only-mode]\n"
         }
       ]
     },
@@ -808,12 +808,12 @@
         {
           "command": "claude plugin validate mods/desktop-usage-strip --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-usage-strip/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-usage-strip/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-usage-strip}, turn.step, ui.render{component=AbovePrompt}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.session.usage, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-usage-strip/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-usage-strip/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-usage-strip}, turn.step, ui.render{component=AbovePrompt}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-usage-strip}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.session.usage, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-usage-strip",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [69.98ms]\n(pass) other pane remains untouched [29.19ms]\n(pass) desktop controls at width 36 [42.29ms]\n(pass) desktop controls at width 84 [35.95ms]\n(pass) explains unsupported surface terminal [17.07ms]\n(pass) explains unsupported surface null [21.16ms]\n(pass) capture native render tree for fixture preview [28.10ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.51s]\n[Captured native render tree for desktop-usage-strip]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [48.21ms]\n(pass) other pane remains untouched [33.26ms]\n(pass) desktop controls at width 36 [37.22ms]\n(pass) desktop controls at width 84 [34.36ms]\n(pass) explains unsupported surface terminal [17.54ms]\n(pass) explains unsupported surface null [16.21ms]\n(pass) capture native render tree for fixture preview [34.86ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.44s]\n[Captured native render tree for desktop-usage-strip]\n"
         }
       ]
     },
@@ -824,12 +824,12 @@
         {
           "command": "claude plugin validate mods/desktop-context-map --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-context-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-context-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-context-map}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.usage, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-context-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-context-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-context-map}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-context-map}\n  \u276f ./register.js calls: $.command.register, $.session.usage, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-context-map",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [66.07ms]\n(pass) other pane remains untouched [29.08ms]\n(pass) desktop controls at width 36 [37.15ms]\n(pass) desktop controls at width 84 [24.75ms]\n(pass) explains unsupported surface terminal [20.18ms]\n(pass) explains unsupported surface null [18.39ms]\n(pass) capture native render tree for fixture preview [25.22ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.49s]\n[Captured native render tree for desktop-context-map]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [36.29ms]\n(pass) other pane remains untouched [26.21ms]\n(pass) desktop controls at width 36 [25.44ms]\n(pass) desktop controls at width 84 [22.08ms]\n(pass) explains unsupported surface terminal [20.08ms]\n(pass) explains unsupported surface null [15.38ms]\n(pass) capture native render tree for fixture preview [17.65ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.40s]\n[Captured native render tree for desktop-context-map]\n"
         }
       ]
     },
@@ -840,12 +840,12 @@
         {
           "command": "claude plugin validate mods/desktop-quota-clock --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-quota-clock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-quota-clock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-quota-clock}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.clock.now (via draw), $.command.register, $.session.usage (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-quota-clock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-quota-clock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-quota-clock}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-quota-clock}\n  \u276f ./register.js calls: $.clock.every, $.clock.now (via draw), $.command.register, $.session.usage (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-quota-clock",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [69.50ms]\n(pass) other pane remains untouched [29.98ms]\n(pass) desktop controls at width 36 [34.97ms]\n(pass) desktop controls at width 84 [27.61ms]\n(pass) explains unsupported surface terminal [20.98ms]\n(pass) explains unsupported surface null [18.25ms]\n(pass) capture native render tree for fixture preview [26.00ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.50s]\n[Captured native render tree for desktop-quota-clock]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.75ms]\n(pass) other pane remains untouched [21.67ms]\n(pass) desktop controls at width 36 [26.33ms]\n(pass) desktop controls at width 84 [36.71ms]\n(pass) explains unsupported surface terminal [22.93ms]\n(pass) explains unsupported surface null [22.29ms]\n(pass) capture native render tree for fixture preview [32.47ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-quota-clock]\n"
         }
       ]
     },
@@ -856,12 +856,12 @@
         {
           "command": "claude plugin validate mods/desktop-cost-watch --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-cost-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-cost-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-cost-watch}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.store.get, $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-cost-watch/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-cost-watch/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-cost-watch}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-cost-watch}\n  \u276f ./register.js calls: $.command.register, $.session.usage (via draw), $.store.get, $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-cost-watch",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [66.32ms]\n(pass) other pane remains untouched [34.98ms]\n(pass) desktop controls at width 36 [35.55ms]\n(pass) desktop controls at width 84 [29.68ms]\n(pass) explains unsupported surface terminal [19.32ms]\n(pass) explains unsupported surface null [20.21ms]\n(pass) capture native render tree for fixture preview [22.20ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.50s]\n[Captured native render tree for desktop-cost-watch]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [37.66ms]\n(pass) other pane remains untouched [23.33ms]\n(pass) desktop controls at width 36 [39.81ms]\n(pass) desktop controls at width 84 [34.77ms]\n(pass) explains unsupported surface terminal [27.63ms]\n(pass) explains unsupported surface null [17.68ms]\n(pass) capture native render tree for fixture preview [27.19ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.38s]\n[Captured native render tree for desktop-cost-watch]\n"
         }
       ]
     },
@@ -872,12 +872,12 @@
         {
           "command": "claude plugin validate mods/desktop-token-flow --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-token-flow/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-token-flow/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-token-flow}, turn.step, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-token-flow/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-token-flow/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-token-flow}, turn.step, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-token-flow}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-token-flow",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.49ms]\n(pass) other pane remains untouched [25.57ms]\n(pass) desktop controls at width 36 [26.52ms]\n(pass) desktop controls at width 84 [21.87ms]\n(pass) explains unsupported surface terminal [19.58ms]\n(pass) explains unsupported surface null [19.89ms]\n(pass) capture native render tree for fixture preview [21.47ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-token-flow]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [46.52ms]\n(pass) other pane remains untouched [26.05ms]\n(pass) desktop controls at width 36 [50.08ms]\n(pass) desktop controls at width 84 [18.91ms]\n(pass) explains unsupported surface terminal [21.96ms]\n(pass) explains unsupported surface null [17.38ms]\n(pass) capture native render tree for fixture preview [19.54ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-token-flow]\n"
         }
       ]
     },
@@ -888,12 +888,12 @@
         {
           "command": "claude plugin validate mods/desktop-tool-pulse --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-tool-pulse/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-tool-pulse/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-tool-pulse}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now, $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-tool-pulse/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-tool-pulse/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-tool-pulse}, tool.call, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-tool-pulse}\n  \u276f ./register.js gating hook without .catch: tool.call\n  \u276f ./register.js calls: $.clock.now, $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-tool-pulse",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.96ms]\n(pass) other pane remains untouched [23.55ms]\n(pass) desktop controls at width 36 [29.37ms]\n(pass) desktop controls at width 84 [22.65ms]\n(pass) explains unsupported surface terminal [19.68ms]\n(pass) explains unsupported surface null [19.72ms]\n(pass) capture native render tree for fixture preview [20.86ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-tool-pulse]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [32.56ms]\n(pass) other pane remains untouched [21.24ms]\n(pass) desktop controls at width 36 [26.68ms]\n(pass) desktop controls at width 84 [22.75ms]\n(pass) explains unsupported surface terminal [14.47ms]\n(pass) explains unsupported surface null [14.29ms]\n(pass) capture native render tree for fixture preview [19.15ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.38s]\n[Captured native render tree for desktop-tool-pulse]\n"
         }
       ]
     },
@@ -904,12 +904,12 @@
         {
           "command": "claude plugin validate mods/desktop-turn-chart --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-turn-chart/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-turn-chart/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-turn-chart}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-turn-chart/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-turn-chart/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-turn-chart}, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-turn-chart}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-turn-chart",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.46ms]\n(pass) other pane remains untouched [27.04ms]\n(pass) desktop controls at width 36 [25.63ms]\n(pass) desktop controls at width 84 [25.01ms]\n(pass) explains unsupported surface terminal [18.92ms]\n(pass) explains unsupported surface null [15.29ms]\n(pass) capture native render tree for fixture preview [21.46ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-turn-chart]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [47.37ms]\n(pass) other pane remains untouched [33.53ms]\n(pass) desktop controls at width 36 [48.29ms]\n(pass) desktop controls at width 84 [45.74ms]\n(pass) explains unsupported surface terminal [20.98ms]\n(pass) explains unsupported surface null [19.05ms]\n(pass) capture native render tree for fixture preview [34.59ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.45s]\n[Captured native render tree for desktop-turn-chart]\n"
         }
       ]
     },
@@ -920,12 +920,12 @@
         {
           "command": "claude plugin validate mods/desktop-edit-map --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-edit-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-edit-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-edit-map}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-edit-map/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-edit-map/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-edit-map}, tool.call{tool=Edit|Write}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-edit-map}\n  \u276f ./register.js gating hook without .catch: tool.call{tool=Edit|Write}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-edit-map",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.47ms]\n(pass) other pane remains untouched [27.06ms]\n(pass) desktop controls at width 36 [26.82ms]\n(pass) desktop controls at width 84 [25.62ms]\n(pass) explains unsupported surface terminal [19.28ms]\n(pass) explains unsupported surface null [14.64ms]\n(pass) capture native render tree for fixture preview [22.48ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-edit-map]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [52.60ms]\n(pass) other pane remains untouched [26.11ms]\n(pass) desktop controls at width 36 [32.79ms]\n(pass) desktop controls at width 84 [42.99ms]\n(pass) explains unsupported surface terminal [19.71ms]\n(pass) explains unsupported surface null [21.54ms]\n(pass) capture native render tree for fixture preview [29.77ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.49s]\n[Captured native render tree for desktop-edit-map]\n"
         }
       ]
     },
@@ -936,12 +936,12 @@
         {
           "command": "claude plugin validate mods/desktop-agent-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-agent-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-agent-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-agent-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.agent.list (via draw), $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-agent-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-agent-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-agent-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-agent-desk}\n  \u276f ./register.js calls: $.agent.list (via draw), $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-agent-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [37.66ms]\n(pass) other pane remains untouched [26.37ms]\n(pass) desktop controls at width 36 [49.55ms]\n(pass) desktop controls at width 84 [20.59ms]\n(pass) explains unsupported surface terminal [19.02ms]\n(pass) explains unsupported surface null [15.50ms]\n(pass) capture native render tree for fixture preview [24.31ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.38s]\n[Captured native render tree for desktop-agent-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [83.63ms]\n(pass) other pane remains untouched [27.77ms]\n(pass) desktop controls at width 36 [38.55ms]\n(pass) desktop controls at width 84 [23.53ms]\n(pass) explains unsupported surface terminal [19.68ms]\n(pass) explains unsupported surface null [24.06ms]\n(pass) capture native render tree for fixture preview [30.68ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.47s]\n[Captured native render tree for desktop-agent-desk]\n"
         }
       ]
     },
@@ -952,12 +952,12 @@
         {
           "command": "claude plugin validate mods/desktop-review-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-review-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-review-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-review-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.session.cwd (via load), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-review-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-review-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-review-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-review-desk}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.session.cwd (via load), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-review-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [38.67ms]\n(pass) other pane remains untouched [24.31ms]\n(pass) desktop controls at width 36 [49.49ms]\n(pass) desktop controls at width 84 [29.57ms]\n(pass) explains unsupported surface terminal [18.77ms]\n(pass) explains unsupported surface null [17.71ms]\n(pass) capture native render tree for fixture preview [21.51ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.39s]\n[Captured native render tree for desktop-review-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [53.65ms]\n(pass) other pane remains untouched [28.16ms]\n(pass) desktop controls at width 36 [33.97ms]\n(pass) desktop controls at width 84 [32.46ms]\n(pass) explains unsupported surface terminal [18.32ms]\n(pass) explains unsupported surface null [18.85ms]\n(pass) capture native render tree for fixture preview [23.35ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.49s]\n[Captured native render tree for desktop-review-desk]\n"
         }
       ]
     },
@@ -968,12 +968,12 @@
         {
           "command": "claude plugin validate mods/desktop-file-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-file-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-file-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-file-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.prompt.fill (via draw), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-file-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-file-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-file-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-file-desk}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.prompt.fill (via draw), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-file-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [38.24ms]\n(pass) other pane remains untouched [24.74ms]\n(pass) desktop controls at width 36 [51.46ms]\n(pass) desktop controls at width 84 [24.33ms]\n(pass) explains unsupported surface terminal [18.53ms]\n(pass) explains unsupported surface null [16.80ms]\n(pass) capture native render tree for fixture preview [21.61ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.39s]\n[Captured native render tree for desktop-file-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [38.58ms]\n(pass) other pane remains untouched [24.42ms]\n(pass) desktop controls at width 36 [36.61ms]\n(pass) desktop controls at width 84 [30.17ms]\n(pass) explains unsupported surface terminal [24.32ms]\n(pass) explains unsupported surface null [21.04ms]\n(pass) capture native render tree for fixture preview [23.55ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.39s]\n[Captured native render tree for desktop-file-desk]\n"
         }
       ]
     },
@@ -984,12 +984,12 @@
         {
           "command": "claude plugin validate mods/desktop-markdown-reader --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-markdown-reader/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-markdown-reader/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-markdown-reader}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-markdown-reader/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-markdown-reader/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-markdown-reader}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-markdown-reader}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-markdown-reader",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [38.79ms]\n(pass) other pane remains untouched [24.13ms]\n(pass) desktop controls at width 36 [54.03ms]\n(pass) desktop controls at width 84 [26.26ms]\n(pass) explains unsupported surface terminal [16.83ms]\n(pass) explains unsupported surface null [18.73ms]\n(pass) capture native render tree for fixture preview [19.32ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.39s]\n[Captured native render tree for desktop-markdown-reader]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [48.77ms]\n(pass) other pane remains untouched [24.81ms]\n(pass) desktop controls at width 36 [32.24ms]\n(pass) desktop controls at width 84 [34.37ms]\n(pass) explains unsupported surface terminal [19.66ms]\n(pass) explains unsupported surface null [21.62ms]\n(pass) capture native render tree for fixture preview [24.98ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.42s]\n[Captured native render tree for desktop-markdown-reader]\n"
         }
       ]
     },
@@ -1000,12 +1000,12 @@
         {
           "command": "claude plugin validate mods/desktop-compare-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-compare-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-compare-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-compare-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-compare-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-compare-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-compare-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-compare-desk}\n  \u276f ./register.js calls: $.command.register, $.fs.read (via readText), $.fs.stat (via readText), $.session.cwd (via readText), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-compare-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [34.54ms]\n(pass) other pane remains untouched [24.86ms]\n(pass) desktop controls at width 36 [25.72ms]\n(pass) desktop controls at width 84 [26.00ms]\n(pass) explains unsupported surface terminal [15.93ms]\n(pass) explains unsupported surface null [16.34ms]\n(pass) capture native render tree for fixture preview [22.68ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.36s]\n[Captured native render tree for desktop-compare-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [46.83ms]\n(pass) other pane remains untouched [24.90ms]\n(pass) desktop controls at width 36 [32.78ms]\n(pass) desktop controls at width 84 [26.64ms]\n(pass) explains unsupported surface terminal [26.66ms]\n(pass) explains unsupported surface null [19.10ms]\n(pass) capture native render tree for fixture preview [29.73ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.42s]\n[Captured native render tree for desktop-compare-desk]\n"
         }
       ]
     },
@@ -1016,12 +1016,12 @@
         {
           "command": "claude plugin validate mods/desktop-prompt-builder --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-prompt-builder/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-prompt-builder/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-prompt-builder}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.prompt.fill (via draw), $.store.get, $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-prompt-builder/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-prompt-builder/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-prompt-builder}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-prompt-builder}\n  \u276f ./register.js calls: $.command.register, $.prompt.fill (via draw), $.store.get, $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-prompt-builder",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [34.53ms]\n(pass) other pane remains untouched [20.93ms]\n(pass) desktop controls at width 36 [25.28ms]\n(pass) desktop controls at width 84 [23.28ms]\n(pass) explains unsupported surface terminal [16.58ms]\n(pass) explains unsupported surface null [17.27ms]\n(pass) capture native render tree for fixture preview [23.56ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.35s]\n[Captured native render tree for desktop-prompt-builder]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [40.52ms]\n(pass) other pane remains untouched [25.22ms]\n(pass) desktop controls at width 36 [26.08ms]\n(pass) desktop controls at width 84 [40.67ms]\n(pass) explains unsupported surface terminal [17.64ms]\n(pass) explains unsupported surface null [17.78ms]\n(pass) capture native render tree for fixture preview [22.91ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.44s]\n[Captured native render tree for desktop-prompt-builder]\n"
         }
       ]
     },
@@ -1032,12 +1032,12 @@
         {
           "command": "claude plugin validate mods/desktop-session-brief --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-session-brief/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-session-brief/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-session-brief}, tool.call, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.session.cwd (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-session-brief/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-session-brief/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-session-brief}, tool.call, turn.complete, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-session-brief}\n  \u276f ./register.js gating hook without .catch: tool.call\n  \u276f ./register.js calls: $.command.register, $.session.cwd (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-session-brief",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.25ms]\n(pass) other pane remains untouched [22.57ms]\n(pass) desktop controls at width 36 [28.80ms]\n(pass) desktop controls at width 84 [28.16ms]\n(pass) explains unsupported surface terminal [16.53ms]\n(pass) explains unsupported surface null [19.17ms]\n(pass) capture native render tree for fixture preview [18.55ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.36s]\n[Captured native render tree for desktop-session-brief]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [32.32ms]\n(pass) other pane remains untouched [18.74ms]\n(pass) desktop controls at width 36 [32.58ms]\n(pass) desktop controls at width 84 [25.77ms]\n(pass) explains unsupported surface terminal [23.20ms]\n(pass) explains unsupported surface null [19.34ms]\n(pass) capture native render tree for fixture preview [34.52ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.36s]\n[Captured native render tree for desktop-session-brief]\n"
         }
       ]
     },
@@ -1048,12 +1048,12 @@
         {
           "command": "claude plugin validate mods/desktop-bookmark-dock --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-bookmark-dock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-bookmark-dock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-bookmark-dock}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via draw, load), $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-bookmark-dock/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-bookmark-dock/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-bookmark-dock}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-bookmark-dock}\n  \u276f ./register.js calls: $.command.register, $.store.delete (via draw), $.store.get (via load), $.store.keys (via draw, load), $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-bookmark-dock",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [34.91ms]\n(pass) other pane remains untouched [23.55ms]\n(pass) desktop controls at width 36 [26.72ms]\n(pass) desktop controls at width 84 [32.98ms]\n(pass) explains unsupported surface terminal [16.28ms]\n(pass) explains unsupported surface null [16.67ms]\n(pass) capture native render tree for fixture preview [19.56ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.37s]\n[Captured native render tree for desktop-bookmark-dock]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [56.07ms]\n(pass) other pane remains untouched [27.81ms]\n(pass) desktop controls at width 36 [36.79ms]\n(pass) desktop controls at width 84 [30.28ms]\n(pass) explains unsupported surface terminal [19.10ms]\n(pass) explains unsupported surface null [21.86ms]\n(pass) capture native render tree for fixture preview [22.37ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.40s]\n[Captured native render tree for desktop-bookmark-dock]\n"
         }
       ]
     },
@@ -1064,12 +1064,12 @@
         {
           "command": "claude plugin validate mods/desktop-checklist-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-checklist-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-checklist-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-checklist-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.now (via draw), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via draw, load), $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-checklist-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-checklist-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-checklist-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-checklist-desk}\n  \u276f ./register.js calls: $.clock.now (via draw), $.command.register, $.store.delete (via draw), $.store.get (via draw, load), $.store.keys (via draw, load), $.store.set (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-checklist-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [36.19ms]\n(pass) other pane remains untouched [33.77ms]\n(pass) desktop controls at width 36 [43.72ms]\n(pass) desktop controls at width 84 [50.01ms]\n(pass) explains unsupported surface terminal [18.77ms]\n(pass) explains unsupported surface null [18.67ms]\n(pass) capture native render tree for fixture preview [29.67ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.45s]\n[Captured native render tree for desktop-checklist-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [49.93ms]\n(pass) other pane remains untouched [25.46ms]\n(pass) desktop controls at width 36 [34.16ms]\n(pass) desktop controls at width 84 [36.27ms]\n(pass) explains unsupported surface terminal [15.95ms]\n(pass) explains unsupported surface null [21.06ms]\n(pass) capture native render tree for fixture preview [24.55ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.40s]\n[Captured native render tree for desktop-checklist-desk]\n"
         }
       ]
     },
@@ -1080,12 +1080,12 @@
         {
           "command": "claude plugin validate mods/desktop-workspace-home --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-workspace-home/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-workspace-home/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-workspace-home}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.session.cwd (via draw, load), $.session.usage (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-workspace-home/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-workspace-home/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-workspace-home}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-workspace-home}\n  \u276f ./register.js calls: $.command.register, $.process.run (via load), $.session.cwd (via draw, load), $.session.usage (via draw), $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-workspace-home",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [41.21ms]\n(pass) other pane remains untouched [30.26ms]\n(pass) desktop controls at width 36 [30.09ms]\n(pass) desktop controls at width 84 [38.23ms]\n(pass) explains unsupported surface terminal [22.55ms]\n(pass) explains unsupported surface null [16.31ms]\n(pass) capture native render tree for fixture preview [26.20ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.42s]\n[Captured native render tree for desktop-workspace-home]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [52.11ms]\n(pass) other pane remains untouched [27.51ms]\n(pass) desktop controls at width 36 [27.40ms]\n(pass) desktop controls at width 84 [31.38ms]\n(pass) explains unsupported surface terminal [25.61ms]\n(pass) explains unsupported surface null [19.59ms]\n(pass) capture native render tree for fixture preview [24.33ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.39s]\n[Captured native render tree for desktop-workspace-home]\n"
         }
       ]
     },
@@ -1096,12 +1096,12 @@
         {
           "command": "claude plugin validate mods/desktop-break-bell --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-break-bell/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-break-bell/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-break-bell}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-break-bell/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-break-bell/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-break-bell}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-break-bell}\n  \u276f ./register.js calls: $.clock.every, $.clock.now, $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-break-bell",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [35.98ms]\n(pass) other pane remains untouched [27.75ms]\n(pass) desktop controls at width 36 [132.43ms]\n(pass) desktop controls at width 84 [96.36ms]\n(pass) explains unsupported surface terminal [14.98ms]\n(pass) explains unsupported surface null [11.73ms]\n(pass) capture native render tree for fixture preview [105.30ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.64s]\n[Captured native render tree for desktop-break-bell]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [29.97ms]\n(pass) other pane remains untouched [17.06ms]\n(pass) desktop controls at width 36 [73.91ms]\n(pass) desktop controls at width 84 [68.29ms]\n(pass) explains unsupported surface terminal [13.34ms]\n(pass) explains unsupported surface null [13.54ms]\n(pass) capture native render tree for fixture preview [110.36ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.48s]\n[Captured native render tree for desktop-break-bell]\n"
         }
       ]
     },
@@ -1112,12 +1112,12 @@
         {
           "command": "claude plugin validate mods/desktop-json-desk --strict",
           "exitCode": 0,
-          "output": "Validating plugin manifest: ./mods/desktop-json-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-json-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-json-desk}, ui.render{component=Pane}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
+          "output": "Validating plugin manifest: ./mods/desktop-json-desk/.claude-plugin/plugin.json\n\nValidating hooks: ./mods/desktop-json-desk/hooks/hooks.json\n\n  \u276f ./register.js hooks: session.start, command.run{command=desktop-json-desk}, ui.render{component=Pane}\n  \u276f ./register.js gating hook without .catch: command.run{command=desktop-json-desk}\n  \u276f ./register.js calls: $.command.register, $.ui.copy (via draw), $.ui.invalidate, $.ui.open, $.ui.resolve, $.ui.toast (via draw)\n\n\u2714 Validation passed\n"
         },
         {
           "command": "claude plugin test mods/desktop-json-desk",
           "exitCode": 0,
-          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [36.76ms]\n(pass) other pane remains untouched [31.97ms]\n(pass) desktop controls at width 36 [32.82ms]\n(pass) desktop controls at width 84 [38.53ms]\n(pass) explains unsupported surface terminal [24.55ms]\n(pass) explains unsupported surface null [19.42ms]\n(pass) capture native render tree for fixture preview [26.12ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.43s]\n[Captured native render tree for desktop-json-desk]\n"
+          "output": "\ntests/register.test.ts:\n(pass) desktop command opens only on request [30.38ms]\n(pass) other pane remains untouched [17.93ms]\n(pass) desktop controls at width 36 [22.74ms]\n(pass) desktop controls at width 84 [20.50ms]\n(pass) explains unsupported surface terminal [17.72ms]\n(pass) explains unsupported surface null [13.02ms]\n(pass) capture native render tree for fixture preview [16.73ms]\n\n 7 pass\n 0 fail\nRan 7 tests across 1 file. [0.30s]\n[Captured native render tree for desktop-json-desk]\n"
         }
       ]
     }
