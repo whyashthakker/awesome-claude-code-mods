@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+16 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -177,6 +177,8 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
+| See which tests failed in Claude's last run | [redgreen](https://github.com/hellosverre/redgreen) | Read-only; parses vitest, jest, pytest, cargo, go, bun and deno output |
+| Restyle the transcript and render tables and charts as cards | [skins](https://github.com/hellosverre/claude-skins) | Fifteen themes; checks GitHub for a new release once a day |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
 
@@ -316,6 +318,28 @@ Displays a breathing animation while Claude works and removes it when the reply 
 
 Settings persist across sessions. **MIT; early-access documentation.**
 
+### [redgreen](https://github.com/hellosverre/redgreen) · hellosverre
+
+Puts the results of the test runs Claude makes in a **Tests** pane: the failing tests by name, the picked failure's assertion and diff, and the session's last 50 runs to step through. A failing run opens the pane and sets the status line to `tests ✗ 3/4`; `/tests` opens it by hand.
+
+```text
+/plugin marketplace add hellosverre/redgreen
+/plugin install redgreen@redgreen
+```
+
+Requires Claude Code **2.1.293+**. Reads vitest, jest, pytest, cargo, go, bun and deno, also through `npm test`, turbo, nx, make, tox and nox. The author documents it as read-only: it observes Bash and PowerShell results, reads Claude Code's saved copy of truncated output, and makes no network requests. Documentation reviewed October 9, 2026; not installed or run for this list.
+
+### [skins](https://github.com/hellosverre/claude-skins) · hellosverre
+
+Restyles the transcript: tool rows with icons and timings, edits as diff cards, tables, code and Mermaid charts as cards, and a live usage band. Fifteen built-in skins; `/skin` opens a settings pane with a live preview, and Claude can design a new skin through a `design` tool the mod registers.
+
+```text
+/plugin marketplace add hellosverre/claude-skins
+/plugin install skins@hellosverre-mods
+```
+
+Requires Claude Code **2.1.287+**. Checks GitHub for a new release once a day and shows a toast when behind. `/skin off` returns to Claude Code's own drawing. Documentation reviewed October 9, 2026; not installed or run for this list.
+
 ### [Intermission](https://github.com/jarrodwatts/intermission) · jarrodwatts
 
 Opens a Doom deathmatch pane while Claude works, using Odamex and Freedoom. The game returns focus when Claude finishes or needs input, such as a permission response. Enable it with `/intermission`; disable it with `/intermission off`.
@@ -347,7 +371,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 16 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
