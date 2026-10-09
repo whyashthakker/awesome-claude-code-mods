@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -12,6 +12,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Read diagrams inside the transcript | [claude-mermaid](https://github.com/galElmalah/claude-mods) | Replaces Mermaid fences with box-art diagrams |
 | Keep follow-up prompts in order | [claude-queue](https://github.com/galElmalah/claude-mods/tree/main/claude-queue) | Automatically submits queued text after turns end |
 | Make tables, code and charts easier to scan | [prismantis](https://github.com/NahumLitvin/prismantis) | Reply themes, copy controls and optional diagram hints |
+| Theme the whole transcript, tool rows included | [skins](https://github.com/hellosverre/claude-skins) | Fifteen themes, Mermaid chart cards and a usage band; desktop draws cards, terminal draws cell art |
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
@@ -88,6 +89,17 @@ Restyles replies with themed tables, highlighted code, diagrams, charts and copy
 ```
 
 Requires 2.1.287+. Its parser is not full CommonMark. The `diagramHints` option adds a model-only prompt note encouraging diagrams, so the default behavior also changes model context. **MIT**, with bundled-code notices in the upstream repository.
+
+### [skins](https://github.com/hellosverre/claude-skins) · hellosverre
+
+Reskins the transcript: tool rows with icons, diff, table and code cards, Mermaid charts (17 kinds, from flowcharts to sankey and gantt) drawn as cards in the skin's colours, alerts and task lists, and a live context and plan-usage band above the prompt. `/skin dracula` switches among fifteen light and dark themes; `/skin quiet on` folds reads and searches to one row.
+
+```text
+/plugin marketplace add hellosverre/claude-skins
+/plugin install skins@hellosverre-mods
+```
+
+Requires 2.1.287+. The desktop Code tab gets SVG cards; the terminal gets the same charts in cells. Upstream documents one network call, a daily GET of its own `plugin.json` on `raw.githubusercontent.com` for update notices, and OS light/dark queries when the theme is `auto`. Reviewed against upstream documentation on October 9, 2026. **MIT**, with a bundled diagram layout library under its own MIT notice.
 
 ### [cctop](https://github.com/tomstagl/cctop) · tomstagl
 
@@ -188,4 +200,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
