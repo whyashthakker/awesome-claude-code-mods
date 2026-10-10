@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -20,6 +20,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Keep a pixel-art companion beside your coding | [maiyu](https://github.com/internet-frens/maiyu) | One small Haiku call per turn; weather lookups and an anonymous usage count, both can be turned off |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -180,6 +181,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [maiyu](https://github.com/internet-frens/maiyu) · internet-frens
+
+A pixel-art companion in a pane next to the conversation. Pick Ai-chan (cheerful), Kai (sassy) or Sora (quiet). They say what Claude is doing in plain words, cheer when tests go green, keep you company when they fail, and celebrate commits and merged PRs. They also nudge you to take breaks and drink water, tell you when another of your sessions finishes, and show the diffs of the files Claude changed. Click them for a headpat or a high five. Over weeks they grow closer: hearts, letters, special days and their own stories. `/frens` opens the pane; `/frens help` lists everything.
+
+```text
+/plugin marketplace add internet-frens/maiyu
+/plugin install maiyu@maiyu
+```
+
+Built and tested on Claude Code 2.1.293; `claude plugin validate --strict` and `claude plugin test` (200 tests) pass. The portrait draws in the terminal (32+ columns), the Desktop Code tab and VS Code; in `claude -p` there is no pane, but `/frens` still answers. The end-of-turn comment is one small Haiku call per turn that did something, through your own Claude Code; `/frens quiet` turns it off. Weather comes from Open-Meteo with a rough location guessed from your IP (ipwho.is) unless you name a city; `/frens weather off` stops every lookup. Each session sends one anonymous count (a random install id, the version and the surface) to the author's API; `/frens share` shows exactly what it holds and `/frens share off` stops it. Project contents are never sent. Optional desktop notifications use `osascript` or `notify-send`. Progress is kept in a shared JSON file in your Claude Code config folder. **MIT.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -188,4 +200,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
