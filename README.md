@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Review and comment on Word, Excel and PDF files Claude makes | [Lazy Panda Panel](https://github.com/paragpandyareal/lazy-panda-panel) | Read-only pane; Claude makes the edits. Files over 4 MB need optional Python 3 |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -339,6 +340,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [Lazy Panda Panel](https://github.com/paragpandyareal/lazy-panda-panel) · paragpandyareal
+
+Opens the Word, Excel, PDF, Markdown, HTML, Confluence (ADF) and PNG files Claude makes in a pane, formatted for business readers. Excel shows calculated values with formula cells marked. Click or drag over a part, write a comment, add more, then send them together; Claude edits the real file and the pane highlights what changed. The pane itself never edits files.
+
+```text
+/plugin install lazy-panda-panel --marketplace paragpandyareal/lazy-panda-panel
+/panda path/to/file.xlsx
+```
+
+Readers are built in, so nothing else is installed. Word, Excel and PDF files over 4 MB need Python 3 on the machine, used only to pass the file's bytes; `/panda setup` checks for it and installs nothing. Pictures draw in kitty and Ghostty and show as a card with an Open button elsewhere, including the desktop app. The author's README lists what it reads, writes and runs. **MIT.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -347,7 +359,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
