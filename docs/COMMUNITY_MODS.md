@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods. Fourteen were checked against author documentation on **October 3, 2026**; cache-meter and usage-limits were listed by their author on October 12, 2026. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -13,6 +13,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Keep follow-up prompts in order | [claude-queue](https://github.com/galElmalah/claude-mods/tree/main/claude-queue) | Automatically submits queued text after turns end |
 | Make tables, code and charts easier to scan | [prismantis](https://github.com/NahumLitvin/prismantis) | Reply themes, copy controls and optional diagram hints |
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
+| Keep prompt-cache hits, context fill and plan limits in view | [cache-meter and usage-limits](https://github.com/T-AI-Labs/claude-code-mods) | Two rows above the prompt; a compaction it triggers is a model request |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
@@ -102,6 +103,18 @@ Install the binary with `brew install tomstagl/tap/cctop` or `cargo install ccto
 
 Upstream describes an in-app panel with a terminal-split fallback; the latter needs a supported multiplexer or terminal. It reads local session data, and some forecasts and token calculations are explicitly estimates. **MIT.**
 
+### [cache-meter and usage-limits](https://github.com/T-AI-Labs/claude-code-mods) · T-AI-Labs
+
+Two rows above the prompt. `cache-meter` shows the share of the last turn's input tokens the prompt cache served and the context window's fill, with a dropdown for an auto-compact threshold (97, 90, 70, 60 or 50%) and Compact and Clear buttons. `usage-limits` shows how much of the 5-hour and weekly limits is used and the time left until each resets.
+
+```text
+/plugin marketplace add T-AI-Labs/claude-code-mods
+/plugin install cache-meter@T-AI-Labs
+/plugin install usage-limits@T-AI-Labs
+```
+
+The author documents no network requests, no external programs and no model calls for the display. A compaction, whether pressed or triggered by the threshold, is a `/compact` model request, and limit readings are only reported on a subscription plan. Options hide the gauges or the figures in parentheses. The author's CI runs validation and tests on Claude Code 2.1.295. Listed by its author; documentation review only. **MIT.**
+
 ### [Flightdeck](https://github.com/scasella/claude-flightdeck) · scasella
 
 Use `/flightdeck` to see subagent cards or swimlanes, permission verdicts, context/cost readings and turn receipts. Useful when delegated work is hard to follow from the transcript alone.
@@ -188,4 +201,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
