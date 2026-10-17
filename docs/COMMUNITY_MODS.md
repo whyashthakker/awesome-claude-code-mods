@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026** (ModStage added October 17, 2026). Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -14,6 +14,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Make tables, code and charts easier to scan | [prismantis](https://github.com/NahumLitvin/prismantis) | Reply themes, copy controls and optional diagram hints |
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
+| Run Codex, Grok, Muse and other agents as watched subagents | [ModStage](https://github.com/qualixar/modstage) | Agent CLIs installed and signed in; Python 3.10+ local bridge on 127.0.0.1 |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
@@ -112,6 +113,17 @@ Use `/flightdeck` to see subagent cards or swimlanes, permission verdicts, conte
 ```
 
 Requires 2.1.287+. The author documents observing prompts, tool inputs and session events, with no file access, subprocesses, network requests or model calls. It shows permission outcomes without approving or blocking calls. Some advisor moments are labelled as inferred. **MIT.**
+
+### [ModStage](https://github.com/qualixar/modstage) · qualixar
+
+Runs Codex, Grok, Muse, Antigravity, Kimi, Qwen Code and OpenCode as Claude Code subagents, each in a live tab, with approval for risky actions and mid-run steering. Agents' permission requests wait in a Needs-you inbox, and a shared board with file leases keeps several agents in one folder from overwriting each other. Open it from the band above the prompt or with `/modstage`.
+
+```text
+/plugin marketplace add qualixar/modstage
+/plugin install modstage@modstage
+```
+
+Requires 2.1.287+ (2.1.286+ in the desktop app's Code tab), Python 3.10+ and at least one supported agent CLI, installed and signed in. The author documents reads of agent output, the run folder and `~/.modstage/`, and writes to `~/.modstage/` (token, run logs) and `<folder>/.modstage/` (board, `STATE.md`). It runs the agent CLIs plus a local bridge, makes network calls to `127.0.0.1` only, and has no telemetry. It blocks direct `codex exec` / `muse exec` / `grok -p` in Bash and Claude's edits to files an agent has claimed. Grok's CLI auto-approves by its own config, so ModStage can't ask first for Grok runs. **MIT.**
 
 ### [aside](https://github.com/JayDoubleu/aside) · JayDoubleu
 
