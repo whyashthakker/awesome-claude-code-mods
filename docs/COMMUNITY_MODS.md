@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -20,6 +20,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| See what a turn changed and what to check | [TL;DR](https://github.com/kushalBanda/claude-tldr) | Terminal only; replaces tool rows with one card per turn |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -180,6 +181,16 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [TL;DR](https://github.com/kushalBanda/claude-tldr) · kushalBanda
+
+Folds each turn's tool rows into one card: the goal, the files changed with line counts, the test runs in order (`pytest ✗ 3 failed → ✓ 12 passed`), the other commands and what Claude read. A Check row turns the card amber for a test file changed in the turn that made tests pass, a write outside the project, a deleted file, an added skip marker, `--no-verify` or a force push. Click a row to open its detail inside the card. It also adds a context bar above the prompt and a one-line progress view while a turn runs.
+
+```text
+/plugin install tldr --marketplace kushalBanda/claude-tldr
+```
+
+Requires Claude Code 2.1.301+. On desktop and in VS Code, Claude Code draws its own rows; the card is for the terminal. The author documents no network calls and no processes; it reads the session's tool calls and results and the files Claude edits, and keeps up to 50 cards per session in the local plugin store. Submitted by the author on October 18, 2026. **MIT.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -188,4 +199,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
