@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -174,6 +174,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
+| Handle what every session needs from you | [Standup](https://github.com/Sma1lboy/claude-standup) | Summary model calls per session; submits your answers as prompts |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
@@ -282,6 +283,17 @@ Use `/aside what has changed so far?` for a side conversation about the session.
 ```
 
 Side answers incur model usage. During later running turns, a fork sees the last completed turn; before the first completion, the default fallback sends transcript text to a model. A side-by-side pane needs 110 columns, otherwise it opens inline. Upstream reports testing on 2.1.270. **MIT; early-access documentation.**
+
+### [Standup](https://github.com/Sma1lboy/claude-standup) · Sma1lboy
+
+Use `/standup` to see every session on the machine in one panel. The top half lists tasks agents hand you through an `assign_task` tool (do, answer or choose); answer from any session and the answer goes back to the session that asked. The bottom half lists finished work, one line per goal, labelled with its project.
+
+```text
+/plugin marketplace add Sma1lboy/claude-standup
+/plugin install standup@standup
+```
+
+Requires 2.1.299+. A pane in Desktop, a band above the prompt in a terminal. After a turn that used tools, it sends the session's transcript to Haiku for a summary, at most once every 30 minutes per session, falling back to the session's own model. Your answers are submitted as prompts to the session that asked. Sessions share one JSON file under `~/.claude/plugins/store/`, and the mod adds a section to the system prompt. **MIT.**
 
 ### [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) · ray-amjad
 
