@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026** (Clawd on **October 29, 2026**). Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -17,6 +17,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
+| Keep a pixel-art companion that acts out your session | [Clawd](https://github.com/mesix971/mods-claude) | Animated in the Desktop Code tab; a block logo in the terminal |
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
@@ -146,6 +147,17 @@ Put an animated scene, your own image or a GIF above the prompt. Scenes react to
 
 Requires 2.1.287+. Upstream documents terminal and Desktop Code support, local image reads and saved settings. PNG/GIF decoding is built in; other image formats use macOS `sips` or ImageMagick on Linux. **MIT.**
 
+### [Clawd](https://github.com/mesix971/mods-claude) · mesix971
+
+A tiny pixel-art Claude who lives above the prompt and silently acts out the session, in 73 animated scenes with no text. He carries boxes while Claude works and sometimes opens one, celebrates passing builds and pushes, and sulks under a rain cloud when they break. Each subagent arrives as a mini-Clawd in its model's color, hands its work back, then leaves in one of five ways. He sweats as the context fills, wears an autopilot visor in auto or bypass mode, and earns experience from tool calls to level up. Hover him for ♥, 🎲, 🕺 and ⭐; `/clawd montre <scene>` plays any scene.
+
+```text
+/plugin marketplace add mesix971/mods-claude
+/plugin install clawd@mods-claude
+```
+
+The animation shows in the Desktop Code tab; the terminal gets a block logo, an emoji and one ▪ per subagent. The author documents no model calls, network requests or process launches: Clawd reads session events, tool results, the permission mode, context and quota figures, and the subagent list, and keeps his petting count, experience and mood in the plugin store. With the author's atelier mod from the same marketplace, he also plays short gags across atelier's band and gives back everything he takes. Tested on 2.1.309 with native tests; French UI and README, with an English summary. Fan-made, not affiliated with Anthropic. **MIT.**
+
 ### [Mindful Claude](https://github.com/halluton/Mindful-Claude) · halluton
 
 Displays a breathing animation while Claude works and removes it when the reply arrives. `/breathe box` selects a four-phase exercise; `/breathe off` hides the band.
@@ -188,4 +200,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
