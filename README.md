@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026** (Arcade on **October 30, 2026**). Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Hand board cards to Claude and play while it works | [Arcade](https://github.com/ArbakovMaxim/agent-arcade) | Optional GitHub sign-in for team features; talks to the author's site; NES in the pane, other games in a browser |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -339,6 +340,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [Arcade](https://github.com/ArbakovMaxim/agent-arcade) · ArbakovMaxim
+
+Project boards and a notebook that Claude works from: *Give to Claude* hands a card or a page to Claude, which ticks off what's done and writes the result back through the mod's `mcp__arcade__notes` tool. All open sessions share the notebook. An optional GitHub sign-in adds an @handle, friends, shared boards and chats. While the agent works, "play?" appears above the prompt after 10 seconds (later or never, in settings); NES games and Flappy Arcade run in the pane, while other games, public-domain books and articles open in a browser. A banner calls you back when Claude finishes or asks for permission. `/arcade` opens it; `/arcade-add` adds a ROM you own.
+
+```text
+/plugin marketplace add ArbakovMaxim/agent-arcade
+/plugin install arcade@agent-arcade
+```
+
+Requires Claude Code 2.1.275+; works in the terminal, VS Code and Claude Desktop. The author documents that it approves only its notebook tool and opening a game in Desktop's built-in browser, and that opening that browser mid-turn interrupts the agent (choosing a browser window in settings avoids this). Topic suggestions run Haiku in your own session on the end of the conversation. Network: the author's Cloudflare site (sign-in, chats, shared boards, online play, book lists), YouTube RSS and blog and podcast feeds; shared boards and chats are stored there unencrypted. It writes only the ROMs you add. Beta. **AGPL-3.0-only; each bundled game has its own open license.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -347,7 +359,7 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
 
 ## How the bundled collection behaves
 
