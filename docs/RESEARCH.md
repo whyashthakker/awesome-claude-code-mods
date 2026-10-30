@@ -30,7 +30,7 @@ The ASCII video viewer mentioned in the request was not uniquely identified by t
 
 ## Community listing follow-up
 
-The [community list](COMMUNITY_MODS.md) now covers 14 external mods, including Claude Image View, 11 initial additions and two Doom projects. Discovery used GitHub searches and community directories; installation and behavior descriptions were checked against the linked authors' READMEs. Directory star counts and scanner results are not used as runtime or security evidence.
+The [community list](COMMUNITY_MODS.md) now covers 15 external mods, including Claude Image View, 11 initial additions and two Doom projects. Discovery used GitHub searches and community directories; installation and behavior descriptions were checked against the linked authors' READMEs. Directory star counts and scanner results are not used as runtime or security evidence.
 
 The added use cases include live web previews, PR review/check monitoring, transcript diagrams, ordered follow-ups, reply formatting, combined session diagnostics, subagent/permission timelines, side questions, reversible redaction, reactive artwork and breathing animations. These complement the bundled viewers and workflow tools without copying third-party code or changing the 50-plugin marketplace.
 
