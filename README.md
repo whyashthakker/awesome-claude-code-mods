@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-15 independently published mods, checked against author documentation on **October 3, 2026** (Clawd on **October 29, 2026**). Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026** (Clawd on **October 31, 2026**). Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -315,7 +315,7 @@ A tiny pixel-art Claude who lives above the prompt and silently acts out the ses
 /plugin install clawd@mods-claude
 ```
 
-The animation shows in the Desktop Code tab; the terminal gets a block logo, an emoji and one ▪ per subagent. The author documents no model calls, network requests or process launches: Clawd reads session events, tool results, the permission mode, context and quota figures, and the subagent list, and keeps his petting count, experience and mood in the plugin store. With the author's atelier mod from the same marketplace, he also plays short gags across atelier's band and gives back everything he takes. Tested on 2.1.309 with native tests; French UI and README, with an English summary. Fan-made, not affiliated with Anthropic. **MIT.**
+The animation shows in the Desktop Code tab; the terminal gets a block logo, an emoji and one ▪ per subagent. The author documents no model calls, network requests or process launches: Clawd reads session events, tool results, the permission mode, context and quota figures, and the subagent list, and keeps his petting count, experience and mood in the plugin store. With the author's atelier mod from the same marketplace, he also plays short gags across atelier's band (his mini-Clawds join in, each with its own subagent's pill) and reacts live to it: a failed build, a quota turning red, a finished subagent or a completed step. He gives back everything he takes. Tested on 2.1.309 with native tests; French UI and README, with an English summary. Fan-made, not affiliated with Anthropic. **MIT.**
 
 ### [Mindful Claude](https://github.com/halluton/Mindful-Claude) · halluton
 
