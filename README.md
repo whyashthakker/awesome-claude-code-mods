@@ -159,7 +159,7 @@ The screenshot in every row opens at full resolution. Each name links to its REA
 
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Inspect active deliberation pass, phase, and coverage | [Ponder](https://github.com/Quinnod345/ponder) | Live status line and /ponder-status inspector; reads .ponder/ without modifying files |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -338,6 +339,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 ```
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
+
+### [Ponder](https://github.com/Quinnod345/ponder) · Quinn O'Donnell
+
+Displays a live deliberation status line across session starts and completed turns showing active pass, review phase, unit coverage, and findings count from `.ponder/*/session.json`. Also provides the `/ponder-status` command to inspect detailed multi-pass convergence state.
+
+```text
+/plugin marketplace add Quinnod345/ponder
+/plugin install ponder@ponder
+```
+
+Pure Node.js implementation (JavaScript mod in `hooks/hooks.json` and `hooks/register.mjs`). Reads `.ponder/` session files; does not modify workspace files, send network requests, or make external model calls. **MIT.**
 
 ## Built-in option: You should know
 
