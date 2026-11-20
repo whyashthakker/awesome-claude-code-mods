@@ -1,6 +1,6 @@
 ## Community mods
 
-14 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
+15 independently published mods, checked against author documentation on **October 3, 2026**. Install these from their authors' marketplaces. The descriptions and commands below are documentation reviews; we have not installed, run, or security-audited these projects. The collection's 70 bundled plugins and their test results are separate.
 
 Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.claude.com/docs/en/plugins/mods/overview#turn-mods-on-or-off) says mods are enabled by default and the old `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS` flag is ignored. Entries marked **early-access documentation** describe older builds; their compatibility with the current API remains unverified. Run `/reload-plugins` after installing into an open session.
 
@@ -14,6 +14,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Make tables, code and charts easier to scan | [prismantis](https://github.com/NahumLitvin/prismantis) | Reply themes, copy controls and optional diagram hints |
 | Inspect cost, cache and tool latency together | [cctop](https://github.com/tomstagl/cctop) | Separate cctop binary; some readings are estimates |
 | Follow subagents and permission decisions | [Flightdeck](https://github.com/scasella/claude-flightdeck) | Observes session events; does not decide permissions |
+| Keep standing goals running and approve their actions | [Quarterdeck](https://github.com/shannonbay/Quarterdeck) | Node 22.13+; runs make model calls in background subagents |
 | Ask a side question about the current session | [aside](https://github.com/JayDoubleu/aside) | Makes additional model calls with token costs |
 | Redact detected sensitive values before model input | [secret-redactor](https://github.com/ray-amjad/awesome-claude-code-function-hooks/tree/main/plugins/secret-redactor) | Reversible, session-memory placeholders; detection has limits |
 | Personalize the prompt with reactive artwork | [pixelband](https://github.com/furqan-khan07/pixelband) | Local images/GIFs; some formats need an OS converter |
@@ -180,6 +181,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
 
+### [Quarterdeck](https://github.com/shannonbay/Quarterdeck) · shannonbay
+
+A Goals pane for persistent goals: standing objectives such as "keep my PRs reviewed" that never finish. Each goal runs on a schedule or when a watch sees something new (an issue, a PR comment, an email), in a background subagent that reads the goal's memory and your past decisions, then proposes actions. The pane lists goals, their status and the items that need you, and you approve or reject proposals there.
+
+```text
+/plugin marketplace add shannonbay/Quarterdeck#release
+/plugin install quarterdeck-goals@quarterdeck
+```
+
+Requires Node 22.13+ (the bundled MCP server uses the built-in `node:sqlite`). Goals, items and memory live in a local SQLite database under your home folder. Each run is a model turn with token costs. The `quarterdeck-guard` dependency checks a run's tool calls against the goal's autonomy settings and refuses unapproved ones; Claude Code's own permission rules still decide every call it allows. **Apache-2.0.**
+
 ## Built-in option: You should know
 
 [Anthropic documents `cc-plugin-you-should-know`](https://code.claude.com/docs/en/plugins/mods/overview#mods-built-into-claude-code) as a side agent that observes longer-running work and puts potentially overlooked information above the prompt. It is disabled by default and may depend on organization availability. Check `/plugin` → Installed → Show disabled, then enable it if present:
@@ -188,4 +200,4 @@ The author tests on **Claude Code 2.1.278** with early-access and fullscreen-ren
 /plugin enable cc-plugin-you-should-know@builtin
 ```
 
-This is an Anthropic built-in, separate from the 14 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
+This is an Anthropic built-in, separate from the 15 external community projects and the 70 plugins bundled here. We have not enabled or measured its model usage or runtime behavior.
