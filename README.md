@@ -179,6 +179,7 @@ Use Claude Code **2.1.287+**. [Anthropic's current documentation](https://code.c
 | Use waiting time for a breathing animation | [Mindful Claude](https://github.com/halluton/Mindful-Claude) | Configurable breathing band while a turn runs |
 | Play Doom deathmatch while waiting | [Intermission](https://github.com/jarrodwatts/intermission) | macOS 15+, Ghostty/kitty, game download and shared-server connection |
 | Play Doom locally inside a pane | [claude-doom](https://github.com/ChaseWNorton/claude-doom) | Apple Silicon alpha; pinned older Claude runtime and native engine |
+| Listen to lofi radio beside the chat | [lofi-desk](https://github.com/Horali/claude-lofi) | Launches a local audio player; drawn pane needs Claude Desktop |
 
 ### [Claude Image View](https://github.com/jarrodwatts/claude-image-view) · jarrodwatts
 
@@ -338,6 +339,17 @@ Runs the original Doom engine with Freedoom game data in a local `/doom` pane. P
 ```
 
 The author tests on **Claude Code 2.1.278** with early-access and fullscreen-rendering flags. Its release launcher, `bash scripts/play.sh`, checks the included engine and uses or installs that pinned runtime. Compatibility with 2.1.287+ is unverified. Requires true color and mouse reporting; the recommended terminal is at least 110 columns × 50 rows. A local Node bridge starts the native engine. The alpha has no audio and discards saves/settings on close. **Mod/engine: GPL-2.0-or-later; Freedoom data: permissive BSD license.**
+
+### [lofi-desk](https://github.com/Horali/claude-lofi) · Horali
+
+`/music` starts FluxFM ChillHop radio and opens a pane with a now-playing card (song, length slider, short playlist) above an animated ASCII scene. A pixel character in the scene types while tool calls run, bobs along when idle and dozes after two minutes. Five scenes rotate every three minutes and the sky follows the local clock. `/music next` changes the scene; `/music fm` opens the Claude FM YouTube livestream in the browser.
+
+```text
+/plugin marketplace add Horali/claude-lofi
+/plugin install lofi-desk@lofi-desk-market
+```
+
+The drawn pane needs Claude Desktop; terminals get a short text version. Playback launches a local player (`ffplay`, `mpv`, VLC, or Windows Media Player on Windows). The author documents network access to the FluxFM stream and its track-history service, and sends only artist and title to the iTunes search and MusicBrainz APIs for song lengths. Reads tool-call events to set the character's mood; does not change or block them. Audio is streamed, not saved. **MIT.**
 
 ## Built-in option: You should know
 
